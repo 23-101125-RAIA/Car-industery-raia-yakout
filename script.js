@@ -60,59 +60,39 @@ document.getElementById("cta-sec3").innerHTML = "Pre-Order Now";
 document.getElementById("ctaa-sec3").innerHTML = "Learn More ";
 
 
-  //  let track = document.getElementById("sliderTrack");
-  // let cards = document.querySelectorAll(".card");
-  // let dots = document.querySelectorAll(".dot");
+document.getElementById("title-sec4").innerHTML = "Innovation that moves <br>you forward";
 
-  // let cardStep = 470; 
-  // let index = 0;
-  // let autoSlide;
+let section4Data = [
+  {
+    icon: "img/ic7.png",
+    title: "AI Autopilot",
+    text: "Advanced neural network for autonomous navigation. Learns your driving patterns and adapts in real-time."
+  },
+  {
+    icon: "img/ic8.png",
+    title: "Ultra Performance",
+    text: "Experience breathtaking acceleration from 0–100 in seconds. Power delivery optimized for maximum thrill."
+  },
+  {
+    icon: "img/ic9.png",
+    title: "Instant Response",
+    text: "Zero lag acceleration and braking control. Every input translates into immediate vehicle response."
+  },
+  {
+    icon: "img/ic10.png",
+    title: "Safety Shield",
+    text: "360° protection with predictive collision avoidance. Advanced sensors monitor your surroundings letantly."
+  }
+];
 
-  // function updateSlider() {
-  //   track.style.transform = "translateX(-" + (index * cardStep) + "px)";
+let section4Grid = document.getElementById("section4Grid");
 
-  //   cards.forEach(function(card) {
-  //     card.classList.remove("active");
-  //   });
-  //   dots.forEach(function(dot) {
-  //     dot.classList.remove("active");
-  //   });
-
-  //   cards[index + 1].classList.add("active");
-  //   if (dots[index + 1]) dots[index + 1].classList.add("active");
-  // }
-
-  // function startAutoSlide() {
-  //   autoSlide = setInterval(function () {
-  //     if (index < cards.length - 3) {
-  //       index++;
-  //     } else {
-  //       index = 0;
-  //     }
-  //     updateSlider();
-  //   }, 2000);
-  // }
-
-  // dots.forEach(function(dot, i) {
-  //   dot.addEventListener("click", function () {
-  //     clearInterval(autoSlide);
-  //     index = i > 0 ? i - 1 : 0;
-  //     updateSlider();
-  //     startAutoSlide();
-  //   });
-  // });
-
-  // updateSlider();
-  // startAutoSlide();
-
-  
-
-
-
-
-
-
-
-
-    
-  
+for (let i = 0; i < section4Data.length; i++) {
+  section4Grid.innerHTML += `
+    <div class="section4-card">
+      <img src="${section4Data[i].icon}" class="section4-icon">
+      <p class="text1">${section4Data[i].title}</p>
+      <p class="subtext">${section4Data[i].text}</p>
+    </div>
+  `;
+}
