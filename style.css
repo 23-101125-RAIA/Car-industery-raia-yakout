@@ -12,7 +12,7 @@
     --heder-b:rgba(255, 255, 255, 0.15);
     --hdr-br:rgba(255, 255, 255, 0.2);
     --glass:rgba(137, 137, 137, 0.20);
---glass-br:rgba(255, 255, 255, 0.50);
+--glass-br:rgba(255, 255, 255, 0.10);
 --bar:rgba(137,137,137,0.2);
 }
  
@@ -401,7 +401,10 @@ padding: 190px;
   transition: transform 0.3s ease;
   display: inline-block;
   font-size: 20px;
+    font-weight: 800;
+      font-family: Jost, sans-serif;
   line-height: 1;}
+  
 /* 
 .slider-section {
   padding: 80px 0;
@@ -544,8 +547,8 @@ padding: 190px;
   gap: 30px;
   padding: 60px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(137, 137, 137, 0.20);
+  border: 1px solid var(--glass-br);
+  background:var(--glass) ;
   text-align: left;
 }
 

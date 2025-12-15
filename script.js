@@ -57,7 +57,7 @@ document.getElementById("subtext-sec2-5").innerHTML = "Surround Sensor Vision";
 
 document.getElementById("title-sec3").innerHTML = "Find the Car That <br>Fits You";
 document.getElementById("cta-sec3").innerHTML = "Pre-Order Now";
-document.getElementById("ctaa-sec3").innerHTML = "Learn More ";
+document.getElementById("ctaa-sec3").innerHTML = 'Learn More <span class="cta-arrow">→</span>';
 
 
 document.getElementById("title-sec4").innerHTML = "Innovation that moves <br>you forward";
