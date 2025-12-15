@@ -36,10 +36,11 @@
     camera-controls
     disable-zoom
     disable-pan
+    
 
     tone-mapping="neutral"
     environment-image="legacy"
-    shadow-intensity="1.64"
+    shadow-intensity="2"
     shadow-softness="1"
 
     camera-orbit="-91.03deg 85.16deg 14m"
@@ -47,7 +48,8 @@
     max-camera-orbit="-90deg 90deg 22m"
 
     field-of-view="22deg"
-  >
+    disable-tab
+  ><div class="progress-bar hide" slot="progress-bar"> <div class="update-bar"></div></div>
   </model-viewer>
 </div>
 
@@ -213,7 +215,8 @@
       camera-controls="false"
       camera-orbit="-90deg 80deg 5m"
       field-of-view="22deg"
-    ></model-viewer>
+      disable-tab
+  ><div class="progress-bar hide" slot="progress-bar"> <div class="update-bar"></div></div></model-viewer>
   </div>
 
   <div class="section5-cta-row">
