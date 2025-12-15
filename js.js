@@ -55,6 +55,10 @@ document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
 document.getElementById("subtitle-sec2-2").innerHTML = "360°";
 document.getElementById("subtext-sec2-5").innerHTML = "Surround Sensor Vision";
 
+document.getElementById("title-sec3").innerHTML = "Find the Car That <br>Fits You";
+document.getElementById("cta-sec3").innerHTML = "Pre-Order Now";
+document.getElementById("ctaa-sec3").innerHTML = "Learn More ";
+
 
 
 
