@@ -1,52 +1,60 @@
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-    }, 4000);
-  });
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) preloader.style.display = "none";
+  }, 4000);
+});
 
-  document.getElementById("nav-link1").innerHTML = "Home"
-  document.getElementById("nav-link2").innerHTML = "Products"
-  document.getElementById("nav-link3").innerHTML = "Event"
-  document.getElementById("nav-link4").innerHTML = "About"
-  document.getElementById("section1-title").innerHTML = "Dragon Motors — Where legacy meets innovation since"
+document.getElementById("nav-link1").innerHTML = "Home";
+document.getElementById("nav-link2").innerHTML = "Products";
+document.getElementById("nav-link3").innerHTML = "Event";
+document.getElementById("nav-link4").innerHTML = "About";
+
+document.getElementById("section1-title").innerHTML =
+  "Dragon Motors — Where legacy meets innovation since";
 
 document.getElementById("title-sec2").innerHTML = "AI-Powered Driving";
-document.getElementById("text-sec2").innerHTML ="Step into the future with an AI-infused machine built to understand you, protect you, and elevate every journey";
+document.getElementById("text-sec2").innerHTML =
+  "Step into the future with an AI-infused machine built to understand you, protect you, and elevate every journey";
 document.getElementById("cta-sec2").innerHTML = "Pre-Order Now";
-     let titles = [
-            'Electric Powertrain', 'Smart Autopilot', 'Location',
-            'Smart Connectivity', 'Fast-Charging System', 'Surround Sensor Vision',
-            'Battery Efficiency', 'Safety Features', 'AI Navigation'
-        ];
 
-        function updateBar() {
-            let num1 = Math.random() * 100;
-            let num2 = Math.random() * 100;
-            let num3 = Math.random() * 100;
+const titles = [
+  "Electric Powertrain",
+  "Smart Autopilot",
+  "Location",
+  "Smart Connectivity",
+  "Fast-Charging System",
+  "Surround Sensor Vision",
+  "Battery Efficiency",
+  "Safety Features",
+  "AI Navigation"
+];
 
-            num1 = Math.floor(num1);
-            num2 = Math.floor(num2);
-            num3 = Math.floor(num3);
+function updateBar() {
+  const nums = [
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100)
+  ];
 
-            let title1 = titles[Math.floor(Math.random() * titles.length)];
-            let title2 = titles[Math.floor(Math.random() * titles.length)];
-            let title3 = titles[Math.floor(Math.random() * titles.length)];
+  document.getElementById("bar1").style.width = nums[0] + "%";
+  document.getElementById("stat-number").innerHTML = nums[0] + "%";
+  document.getElementById("subtext-sec2").innerHTML =
+    titles[Math.floor(Math.random() * titles.length)];
 
-            document.getElementById('bar1').style.width = num1 + '%';
-            document.getElementById('stat-number').innerHTML = num1 + '%';
-            document.getElementById('subtext-sec2').innerHTML = title1;
+  document.getElementById("bar2").style.width = nums[1] + "%";
+  document.getElementById("stat-number1").innerHTML = nums[1] + "%";
+  document.getElementById("subtext-sec2-1").innerHTML =
+    titles[Math.floor(Math.random() * titles.length)];
 
-            document.getElementById('bar2').style.width = num2 + '%';
-            document.getElementById('stat-number1').innerHTML = num2 + '%';
-            document.getElementById('subtext-sec2-1').innerHTML = title2;
+  document.getElementById("bar3").style.width = nums[2] + "%";
+  document.getElementById("stat-number2").innerHTML = nums[2] + "%";
+  document.getElementById("subtext-sec2-2").innerHTML =
+    titles[Math.floor(Math.random() * titles.length)];
+}
 
-            document.getElementById('bar3').style.width = num3 + '%';
-            document.getElementById('stat-number2').innerHTML = num3 + '%';
-            document.getElementById('subtext-sec2-2').innerHTML = title3;
-        }
-
-        updateBar();
-        setInterval(updateBar, 2000);
+updateBar();
+setInterval(updateBar, 2000);
 
 document.getElementById("subtitle-sec2").innerHTML = "5G";
 document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
@@ -55,68 +63,100 @@ document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
 document.getElementById("subtitle-sec2-2").innerHTML = "360°";
 document.getElementById("subtext-sec2-5").innerHTML = "Surround Sensor Vision";
 
-document.getElementById("title-sec3").innerHTML = "Find the Car That <br>Fits You";
+document.getElementById("title-sec3").innerHTML =
+  "Find the Car That <br>Fits You";
 document.getElementById("cta-sec3").innerHTML = "Pre-Order Now";
-document.getElementById("ctaa-sec3").innerHTML = 'Learn More <span class="cta-arrow">→</span>';
+document.getElementById("ctaa-sec3").innerHTML =
+  'Learn More <span class="cta-arrow">→</span>';
 
+document.getElementById("title-sec4").innerHTML =
+  "Innovation that moves <br>you forward";
 
-document.getElementById("title-sec4").innerHTML = "Innovation that moves <br>you forward";
-
-let section4Data = [
+const section4Data = [
   {
     icon: "img/ic7.png",
     title: "AI Autopilot",
-    text: "Advanced neural network for autonomous navigation. Learns your driving patterns and adapts in real-time."
+    text:
+      "Advanced neural network for autonomous navigation. Learns your driving patterns and adapts in real-time."
   },
   {
     icon: "img/ic8.png",
     title: "Ultra Performance",
-    text: "Experience breathtaking acceleration from 0–100 in seconds. Power delivery optimized for maximum thrill."
+    text:
+      "Experience breathtaking acceleration from 0–100 in seconds. Power delivery optimized for maximum thrill."
   },
   {
     icon: "img/ic9.png",
     title: "Instant Response",
-    text: "Zero lag acceleration and braking control. Every input translates into immediate vehicle response."
+    text:
+      "Zero lag acceleration and braking control. Every input translates into immediate vehicle response."
   },
   {
     icon: "img/ic10.png",
     title: "Safety Shield",
-    text: "360° protection with predictive collision avoidance. Advanced sensors monitor your surroundings letantly."
+    text:
+      "360° protection with predictive collision avoidance. Advanced sensors monitor surroundings constantly."
   }
 ];
 
-let section4Grid = document.getElementById("section4Grid");
+const section4Grid = document.getElementById("section4Grid");
 
-for (let i = 0; i < section4Data.length; i++) {
+section4Data.forEach(item => {
   section4Grid.innerHTML += `
     <div class="section4-card">
-      <img src="${section4Data[i].icon}" class="section4-icon">
-      <p class="text1">${section4Data[i].title}</p>
-      <p class="subtext">${section4Data[i].text}</p>
+      <img src="${item.icon}" class="section4-icon">
+      <p class="text1">${item.title}</p>
+      <p class="subtext">${item.text}</p>
     </div>
   `;
-}
+});
 
 const model = document.getElementById("section5Model");
 const buttons = document.querySelectorAll(".cta-text");
 
-const positions = {
-  front: "translateX(-95%)",
-  side:  "translateX(-60%)",
-  back:  "translateX(-35%)"
-};
+if (model && buttons.length) {
+  const positions = {
+    front: "translateX(-95%)",
+    side: "translateX(-60%)",
+    back: "translateX(-35%)"
+  };
 
+  model.style.transform = positions.back;
 
-model.style.transform = positions.back;
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    model.style.transform = positions[btn.dataset.pos];
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      model.style.transform = positions[btn.dataset.pos];
+    });
   });
-});
+}
+
+
+document.getElementById("title-sec5").innerHTML = "Smart Features the Future";
+document.getElementById("subtitle-sec5").innerHTML = "Driving Reinvented";
+document.getElementById("desc-sec5").innerHTML =
+  "Experience advanced technology designed to make every drive safer, smarter, and more connected.";
+
+document.getElementById("cta-main-sec5").innerHTML = "Pre-Order Now";
+document.getElementById("cta-second-text-sec5").innerHTML =  
+  'Learn More <span class="cta-arrow">→</span>';
+
+document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
+document.getElementById("card1-text").innerHTML =
+  "Reduced air drag for maximum performance.";
+
+document.getElementById("card2-title").innerHTML = "Sustainable Materials";
+document.getElementById("card2-text").innerHTML =
+  "Advanced AI durability with minimal waste.";
+
+document.getElementById("bigcard-title").innerHTML = "Next-Gen Smart Systems";
+
+document.getElementById("view-front").innerHTML = "Front";
+document.getElementById("view-side").innerHTML = "Side";
+document.getElementById("view-back").innerHTML = "Back";
+
+document.getElementById("faq-title").innerHTML = "The Future of Driving";
 
 let faqData = [
   {
@@ -157,34 +197,45 @@ let faqData = [
   }
 ];
 
-let faqContainer = document.getElementById("faqContainer");
 
-for (let i = 0; i < faqData.length; i++) {
-  let paragraphsHTML = "";
+const faqContainer = document.getElementById("faqContainer");
 
-  for (let j = 0; j < faqData[i].paragraphs.length; j++) {
-    paragraphsHTML += `<p class="subtext">${faqData[i].paragraphs[j]}</p>`;
-  }
+faqData.forEach((item, i) => {
+  let pHTML = "";
+  item.paragraphs.forEach(p => {
+    pHTML += `<p class="subtext">${p}</p>`;
+  });
 
   faqContainer.innerHTML += `
     <div class="fqa-box" id="faq-${i}">
       <div class="fqa-question">
-        <p class="text1">${faqData[i].question}</p>
+        <p class="text1">${item.question}</p>
         <div class="arrow"></div>
       </div>
-      <div class="fqa-answer">
-        ${paragraphsHTML}
-      </div>
+      <div class="fqa-answer">${pHTML}</div>
     </div>
   `;
-}
-for (let i = 0; i < faqData.length; i++) {
+});
+
+faqData.forEach((_, i) => {
   document.getElementById(`faq-${i}`).addEventListener("click", function () {
     this.classList.toggle("active");
   });
-}
+});
 
-
-
-
-
+document.getElementById("footer-brand-name").innerHTML = "Dragon Motors";
+document.getElementById("footer-company").innerHTML = "Company";
+document.getElementById("footer-about").innerHTML = "About Us";
+document.getElementById("footer-careers").innerHTML = "Careers";
+document.getElementById("footer-services").innerHTML = "Services";
+document.getElementById("footer-vehicles").innerHTML = "Vehicles";
+document.getElementById("footer-pricing").innerHTML = "Pricing";
+document.getElementById("footer-support").innerHTML = "Support";
+document.getElementById("footer-faqs").innerHTML = "FAQs";
+document.getElementById("footer-contact").innerHTML = "Contact";
+document.getElementById("footer-subtitle").innerHTML =
+  "READY TO DRIVE THE FUTURE?";
+  document.getElementById("ctaa-sec55").innerHTML =
+  'Subscribe <span class="footer-cta-arrow">→</span>';
+document.getElementById("footer-copy").innerHTML =
+  "© Copyright 2024, All Rights Reserved by Exline";
