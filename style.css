@@ -14,6 +14,13 @@
     --glass:rgba(137, 137, 137, 0.20);
 --glass-br:rgba(255, 255, 255, 0.10);
 --bar:rgba(137,137,137,0.2);
+--sh:rgba(224, 237, 61, 0.25);
+--sh1:agba(224, 237, 61, 0.6);
+--c4:#533401;
+--c2:#333333;
+--c7:#020045;
+--c5:#BD0000;
+--c8:#FFAE00;
 }
  
 
@@ -466,7 +473,7 @@ padding: 200px 190px 0 ;
 
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 30px 70px rgba(224, 237, 61, 0.25);
+            box-shadow: 0 30px 70px var(--sh);
         }
 
         .card-top {
@@ -489,31 +496,32 @@ padding: 200px 190px 0 ;
             width: 54px;
             height: 50px;
             border-radius: 16px;
-            background: #E0ED3D;
+            background: var(--cta);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1a1a2e;
-            font-size: 22px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-            text-decoration: none;
+            color: var(--black);
+        font-size: 42px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    font-weight: 600;
         }
 
         .cta-btn:hover {
             transform: scale(1.1);
         }
 
-        .c1 { background: #fff; }
-        .c2 { background: #333333; }
-        .c3 { background: #005C48; }
-        .c4 { background: #533401; }
-        .c5 { background: #BD0000; }
-        .c6 { background: #C0C0C0; }
-        .c7 { background: #020045; }
-        .c8 { background: #FFAE00; }
-        .c9 { background: #A5C609; }
-        .c10 { background: #000; }
+        .c1 { background: var(--white); }
+        .c2 { background: var(--c2); }
+        .c3 { background: var(--greenl); }
+        .c4 { background: var(--c4); }
+        .c5 { background: var(--c5); }
+        .c6 { background: var(--gray-text); }
+        .c7 { background: var(--c7); }
+        .c8 { background: var(--c8); }
+        .c9 { background: var(--cta); }
+        .c10 { background: var(--black); }
 
         .card-bottom {
             flex: 1;
@@ -521,28 +529,32 @@ padding: 200px 190px 0 ;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 24px;
+            gap: 14px;
         }
 
-        .cars-3d {
-            width: 330px;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+       
+.model-frame {
+    width: 330px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        .cars-3d img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+
+.model-frame model-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 
         .slider-text {
             font-family: 'Jost', sans-serif;
             font-size: 20px;
             text-align: center;
-            color: #FFDFBE;
+            color: var(--bieg);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -558,41 +570,21 @@ padding: 200px 190px 0 ;
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: var(--gray-text);
+            
             cursor: pointer;
             transition: transform 0.3s ease, background 0.3s ease;
         }
 
         .dot:hover {
-            background: rgba(224, 237, 61, 0.6);
+            background: var(--sh1);
         }
 
         .dot.active {
-            background: #E0ED3D;
+            background: var(--cta);
             transform: scale(1.5);
         }
 
-        @media (max-width: 1024px) {
-            .slider-section {
-                padding: 60px 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .slider-section {
-                padding: 40px 20px;
-            }
-
-            .card {
-                width: 320px;
-                height: 450px;
-            }
-
-            .cars-3d {
-                width: 250px;
-                height: 160px;
-            }
-        }
 
 .section4{
   width: 100%;

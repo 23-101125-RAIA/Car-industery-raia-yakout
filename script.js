@@ -318,3 +318,23 @@ document.getElementById("footer-copy").innerHTML =
    
         sliderTrack.addEventListener('mouseenter', stopAutoSlide);
         sliderTrack.addEventListener('mouseleave', startAutoSlide);
+
+
+document.getElementById("id1").innerHTML = "↗";
+document.getElementById("id2").innerHTML = "Lotus <br>Evora GT";
+document.getElementById("id3").innerHTML = "↗";
+document.getElementById("id4").innerHTML = "McLaren<br>Arturagt4";
+document.getElementById("id5").innerHTML = "↗";
+document.getElementById("id6").innerHTML = "McLaren<br>Sienna";
+document.getElementById("id7").innerHTML = "↗";
+document.getElementById("id8").innerHTML = "Nissan<br> GT-R Premium";
+document.getElementById("id9").innerHTML = "↗";
+document.getElementById("id10").innerHTML = "Mansory<br>Mercedes-amg_gt";
+document.getElementById("id11").innerHTML = "↗";
+document.getElementById("id12").innerHTML = "Nissan<br>Z Nismo";
+document.getElementById("id13").innerHTML = "↗";
+document.getElementById("id14").innerHTML = "Toyota<br> GR Supra";
+document.getElementById("id15").innerHTML = "↗";
+document.getElementById("id16").innerHTML = "Audi<br>R8 LMS Ultra";
+document.getElementById("id17").innerHTML = "↗";
+document.getElementById("id18").innerHTML = "Aston Martin<br>Vulcan";
