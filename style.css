@@ -202,6 +202,14 @@ opacity: 0.9;
   line-height: 133.5%;
   text-transform: capitalize;
 }
+.title1{
+  color: var(--cta);
+  font-family: Jost;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 133.5%;
+  text-transform: capitalize;
+}
 
 .text{
   color: var(--gray-text);
@@ -217,6 +225,19 @@ opacity: 0.9;
   font-weight: 400;
   letter-spacing: -0.36px;
 }
+.cta-text{
+  width: 93px;
+height: 60px;
+color: var(--white);
+font-family: Jost;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 27.775px; /* 138.875% */
+letter-spacing: -0.4px;
+background-color: var(--glass);
+}
+
 
 
 .section2-div1{
@@ -558,5 +579,113 @@ padding: 190px;
   height: auto;
 }
 
+.section5{
+  width: 100%;
+  padding: 100px 200px;
+  display: flex;
+  gap: 190px;
+}
+
+
+.section5-left,
+.section5-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.section5-icon{ width: 44.012px; height: auto; }
+
+.section5-text-row{
+  display: flex;
+
+  gap: 20px;
+}
+.section5-right{
+  align-items: center;
+  justify-content: center;
+
+}
+
+.section5-cards{
+  display: flex;
+  gap: 30px;
+}
+
+
+.section5-card{
+  width: 340px;
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 14px;
+  border: 0.7px solid var(--glass-br);
+  background: var(--glass);
+  backdrop-filter: blur(26px);
+    
+
+}
+
+
+.section5-big-card{
+  width: 100%;
+  height: 637px;
+  padding: 60px 0;
+  border-radius: 18px;
+  border: 0.7px solid var(--glass-br);
+  background: var(--glass);
+  backdrop-filter: blur(26px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+    align-items: center;
+  justify-content: center;
+
+}
+
+
+.section5-model-frame{
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.section5-3d{
+width: 179%;
+    height: 100%;
+    position: absolute;
+    left: 70%;
+  transform: translateX(-50%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+
+
+.section5-cta-row{
+  display: flex;
+  gap: 15px;
+}
+
+.cta-text{
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: var(--glass);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-text:hover,
+.cta-text.active{
+  background: var(--cta);
+  color: var(--black);
+}
 
 

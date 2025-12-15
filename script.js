@@ -96,3 +96,27 @@ for (let i = 0; i < section4Data.length; i++) {
     </div>
   `;
 }
+
+const model = document.getElementById("section5Model");
+const buttons = document.querySelectorAll(".cta-text");
+
+const positions = {
+  front: "translateX(-95%)",
+  side:  "translateX(-60%)",
+  back:  "translateX(-35%)"
+};
+
+
+model.style.transform = positions.back;
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    model.style.transform = positions[btn.dataset.pos];
+  });
+});
+
+
+
