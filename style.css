@@ -9,6 +9,10 @@
     --bieg:#FFDFBE;
     --gray-text:#C0C0C0;
     --greenl:#076653;
+    --heder-b:rgba(255, 255, 255, 0.15);
+    --hdr-br:rgba(255, 255, 255, 0.2);
+    --glass:rgba(137, 137, 137, 0.20);
+--glass-br:rgba(255, 255, 255, 0.50);
 }
  
 
@@ -72,18 +76,21 @@ a,li{
 list-style-type: none;
 text-decoration: none;}
 .header{
-    width: 100%;
-    height: 150px;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 400px;
- 
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 400px;
+  background: var(--heder-bk);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
+
 
 
         .nav-link {
@@ -128,7 +135,7 @@ line-height: normal;
 
     .section1{
         width: 100%;
-        height: 1559px;
+        height: 1309px;
         background-image: url("img/MacBook Air - 2.png");
         background-position: top;
         background-repeat: no-repeat;
@@ -161,4 +168,70 @@ opacity: 0.9;
   width: 100%;
   height: 100%;
 }
+
+.section2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section2-div{
+width: 30%;
+height: auto;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 20px;
+flex-direction: column;
+
+}
+
+.section2-div1{
+width: 50%;
+height: auto;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 20px;
+border-radius: 14.618px;
+border: 0.365px solid var(--glass-br) ;
+background:var(--glass) ;
+backdrop-filter: blur(27.04408836364746px);
+
+}
+.title{
+   color: var(--bieg);
+font-family: Jost;
+font-size: 50px;
+font-style: normal;
+font-weight: 600;
+line-height: 133.5%; 
+text-transform: uppercase; 
+}
+.text{
+   color: var(--gray-text);
+font-family: Jost;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.36px;
+
+}
+.cta{
+   width: 175px;
+height: 60px; 
+border-radius: 15px;
+background: var(--cta);
+color: var(--black);
+font-family: Jost;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 27.775px; 
+letter-spacing: -0.4px;
+}
+
 
