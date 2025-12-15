@@ -120,3 +120,65 @@ buttons.forEach(btn => {
 
 
 
+const faqData = [
+  {
+    question: "How long does it take to fully charge the car?",
+    paragraphs: [
+      "Charging time depends on the charger type and the battery capacity. Home chargers typically take longer than fast public chargers.",
+      "With rapid charging stations, the battery can reach up to 80% in under 30 minutes.",
+      "Battery management systems are designed to protect long-term performance during frequent charging."
+    ]
+  },
+  {
+    question: "Is the car fully autonomous?",
+    paragraphs: [
+      "The vehicle supports advanced driver-assistance systems designed to improve safety and comfort.",
+      "Full autonomy depends on road conditions, regulations, and driver supervision.",
+      "Software updates continuously enhance autonomous capabilities over time."
+    ]
+  },
+  {
+    question: "How does the car communicate across systems?",
+    paragraphs: [
+      "The car uses intelligent communication protocols between sensors, cameras, and onboard computers.",
+      "These systems work together to analyze surroundings in real time.",
+      "Culturally adaptive interfaces ensure clear communication across global markets."
+    ]
+  },
+  {
+    question: "Where can I book a test drive?",
+    paragraphs: [
+      "Test drives can be booked through the official website or authorized dealerships.",
+      "Availability may vary depending on your location.",
+      "Special demo events are also held throughout the year."
+    ]
+  }
+];
+
+const faqContainer = document.getElementById("faqContainer");
+
+for (let i = 0; i < faqData.length; i++) {
+  let paragraphsHTML = "";
+
+  for (let j = 0; j < faqData[i].paragraphs.length; j++) {
+    paragraphsHTML += `<p class="text">${faqData[i].paragraphs[j]}</p>`;
+  }
+
+  faqContainer.innerHTML += `
+    <div class="fqa-box" id="faq-${i}">
+      <div class="fqa-question">
+        <p class="text1">${faqData[i].question}</p>
+        <div class="arrow"></div>
+      </div>
+      <div class="fqa-answer">
+        ${paragraphsHTML}
+      </div>
+    </div>
+  `;
+}
+
+for (let i = 0; i < faqData.length; i++) {
+  document.getElementById(`faq-${i}`).addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
