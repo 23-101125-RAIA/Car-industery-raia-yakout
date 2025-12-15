@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
   setTimeout(() => {
-    const preloader = document.getElementById("preloader");
+    let preloader = document.getElementById("preloader");
     if (preloader) preloader.style.display = "none";
   }, 4000);
 });
@@ -18,7 +18,7 @@ document.getElementById("text-sec2").innerHTML =
   "Step into the future with an AI-infused machine built to understand you, protect you, and elevate every journey";
 document.getElementById("cta-sec2").innerHTML = "Pre-Order Now";
 
-const titles = [
+let titles = [
   "Electric Powertrain",
   "Smart Autopilot",
   "Location",
@@ -31,7 +31,7 @@ const titles = [
 ];
 
 function updateBar() {
-  const nums = [
+  let nums = [
     Math.floor(Math.random() * 100),
     Math.floor(Math.random() * 100),
     Math.floor(Math.random() * 100)
@@ -72,7 +72,7 @@ document.getElementById("ctaa-sec3").innerHTML =
 document.getElementById("title-sec4").innerHTML =
   "Innovation that moves <br>you forward";
 
-const section4Data = [
+let section4Data = [
   {
     icon: "img/ic7.png",
     title: "AI Autopilot",
@@ -95,11 +95,11 @@ const section4Data = [
     icon: "img/ic10.png",
     title: "Safety Shield",
     text:
-      "360° protection with predictive collision avoidance. Advanced sensors monitor surroundings constantly."
+      "360° protection with predictive collision avoidance. Advanced sensors monitor surroundings letantly."
   }
 ];
 
-const section4Grid = document.getElementById("section4Grid");
+let section4Grid = document.getElementById("section4Grid");
 
 section4Data.forEach(item => {
   section4Grid.innerHTML += `
@@ -111,11 +111,11 @@ section4Data.forEach(item => {
   `;
 });
 
-const model = document.getElementById("section5Model");
-const buttons = document.querySelectorAll(".cta-text");
+let model = document.getElementById("section5Model");
+let buttons = document.querySelectorAll(".cta-text");
 
 if (model && buttons.length) {
-  const positions = {
+  let positions = {
     front: "translateX(-95%)",
     side: "translateX(-60%)",
     back: "translateX(-35%)"
@@ -198,7 +198,7 @@ let faqData = [
 ];
 
 
-const faqContainer = document.getElementById("faqContainer");
+let faqContainer = document.getElementById("faqContainer");
 
 faqData.forEach((item, i) => {
   let pHTML = "";
@@ -239,3 +239,82 @@ document.getElementById("footer-subtitle").innerHTML =
   'Subscribe <span class="footer-cta-arrow">→</span>';
 document.getElementById("footer-copy").innerHTML =
   "© Copyright 2024, All Rights Reserved by Exline";
+
+   let sliderTrack = document.getElementById('sliderTrack');
+        let dots = document.querySelectorAll('.dot');
+        let currentGroup = 0;
+        let autoSlideInterval;
+        let isAnimating = false;
+
+        let cardWidth = 430;
+        let gap = 40;
+        let groupSize = 3;
+        let slideDistance = (cardWidth + gap) * groupSize;
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentGroup);
+            });
+        }
+
+        function slideToGroup(groupIndex, smooth = true) {
+            if (isAnimating) return;
+            
+            isAnimating = true;
+            let targetPosition = -(groupIndex * slideDistance);
+            
+            if (smooth) {
+                sliderTrack.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            } else {
+                sliderTrack.style.transition = 'none';
+            }
+            
+            sliderTrack.style.transform = `translateX(${targetPosition}px)`;
+            
+            setTimeout(() => {
+                if (groupIndex === 3) {
+                    sliderTrack.style.transition = 'none';
+                    currentGroup = 0;
+                    sliderTrack.style.transform = `translateX(0px)`;
+                    updateDots();
+                } else {
+                    currentGroup = groupIndex;
+                    updateDots();
+                }
+                isAnimating = false;
+            }, 800);
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(() => {
+                let nextGroup = currentGroup + 1;
+                slideToGroup(nextGroup);
+            }, 3000);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+            }
+        }
+
+      
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                stopAutoSlide();
+                let groupIndex = parseInt(dot.dataset.index);
+                slideToGroup(groupIndex);
+                setTimeout(() => {
+                    startAutoSlide();
+                }, 3000);
+            });
+        });
+
+
+        updateDots();
+        startAutoSlide();
+
+   
+        sliderTrack.addEventListener('mouseenter', stopAutoSlide);
+        sliderTrack.addEventListener('mouseleave', startAutoSlide);

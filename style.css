@@ -347,7 +347,7 @@ background-color: var(--glass);
   display: flex;
   justify-content: space-between;
   align-items: center;
-padding: 190px;
+padding: 200px 190px 0 ;
   background: var(--dark-bg);
   min-height: 120px;
   margin: 0;
@@ -426,119 +426,173 @@ padding: 190px;
       font-family: Jost, sans-serif;
   line-height: 1;}
   
-/* 
-.slider-section {
-  padding: 80px 0;
-}
+ .slider-section {
+            width: 100%;
+            padding: 30px 100px 100px;
+            overflow: hidden;
+            font-family: Jost;
+            
+        }
 
-.slider-viewport {
-  width: 1440px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+        .slider-viewport {
+            width: 100%;
+            max-width: 1408px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
 
-.slider-track {
-  display: flex;
-  gap: 40px;
-  transition: transform 0.6s ease;
-  padding: 40px 0;
-}
+        .slider-track {
+            display: flex;
+            gap: 40px;
+            padding: 40px 0;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(0);
+        }
 
-.card {
-  width: 430px;
-  height: 500px;
-  padding: 24px;
-  border-radius: 40px;
-  background: rgba(137,137,137,0.2);
-  backdrop-filter: blur(30px);
-  text-decoration: none;
-  flex-shrink: 0;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+        .card {
+            width: 430px;
+            height: 500px;
+            padding: 24px;
+            border-radius: 40px;
+            background: rgba(137, 137, 137, 0.2);
+            backdrop-filter: blur(30px);
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
 
-.card.active {
-  transform: scale(1.08);
-  box-shadow: 0 30px 70px rgba(224,237,61,0.25);
-}
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 70px rgba(224, 237, 61, 0.25);
+        }
 
-.card-top {
-  display: flex;
-  justify-content: space-between;
-}
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+        }
 
-.circles {
-  display: flex;
-  gap: 10px;
-}
+        .circles {
+            display: flex;
+            gap: 10px;
+        }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
 
-.cta-btn {
-  width: 54px;
-  height: 50px;
-  border-radius: 16px;
-  background: #E0ED3D;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1a1a2e;
-  font-size: 22px;
-}
+        .cta-btn {
+            width: 54px;
+            height: 50px;
+            border-radius: 16px;
+            background: #E0ED3D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a2e;
+            font-size: 22px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+        }
 
-.c1 { background: #A0C107; }
-.c2 { background: #ffffff; }
-.c3 { background: #E0ED3D; }
-.c4 { background: #FF6B35; }
-.c5 { background: #3B82F6; }
-.c6 { background: #DC2626; }
-.c7 { background: #1a1a2e; }
+        .cta-btn:hover {
+            transform: scale(1.1);
+        }
 
-.card-bottom {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
+        .c1 { background: #fff; }
+        .c2 { background: #333333; }
+        .c3 { background: #005C48; }
+        .c4 { background: #533401; }
+        .c5 { background: #BD0000; }
+        .c6 { background: #C0C0C0; }
+        .c7 { background: #020045; }
+        .c8 { background: #FFAE00; }
+        .c9 { background: #A5C609; }
+        .c10 { background: #000; }
 
-.cars-3d {
-  width: 330px;
-  height: 200px;
-}
+        .card-bottom {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
 
-.slider-text {
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  color: #FFDFBE;
-  text-transform: uppercase;
-}
+        .cars-3d {
+            width: 330px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 40px;
-}
+        .cars-3d img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
+        .slider-text {
+            font-family: 'Jost', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFDFBE;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.dot.active {
-  background: #E0ED3D;
-  transform: scale(1.5);
-} */
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .dot:hover {
+            background: rgba(224, 237, 61, 0.6);
+        }
+
+        .dot.active {
+            background: #E0ED3D;
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 1024px) {
+            .slider-section {
+                padding: 60px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-section {
+                padding: 40px 20px;
+            }
+
+            .card {
+                width: 320px;
+                height: 450px;
+            }
+
+            .cars-3d {
+                width: 250px;
+                height: 160px;
+            }
+        }
 
 .section4{
   width: 100%;
