@@ -13,12 +13,41 @@
 document.getElementById("title-sec2").innerHTML = "AI-Powered Driving";
 document.getElementById("text-sec2").innerHTML ="Step into the future with an AI-infused machine built to understand you, protect you, and elevate every journey";
 document.getElementById("cta-sec2").innerHTML = "Pre-Order Now";
-document.getElementById("subtext-sec2").innerHTML = "Electric Powertrain";
-document.getElementById("stat-number").innerHTML = "65%";
-document.getElementById("subtext-sec2-1").innerHTML = "Smart Autopilot";
-document.getElementById("stat-number1").innerHTML = "80%";
-document.getElementById("subtext-sec2-2").innerHTML = "Location";
-document.getElementById("stat-number2").innerHTML = "74%";
+     let titles = [
+            'Electric Powertrain', 'Smart Autopilot', 'Location',
+            'Smart Connectivity', 'Fast-Charging System', 'Surround Sensor Vision',
+            'Battery Efficiency', 'Safety Features', 'AI Navigation'
+        ];
+
+        function updateBar() {
+            let num1 = Math.random() * 100;
+            let num2 = Math.random() * 100;
+            let num3 = Math.random() * 100;
+
+            num1 = Math.floor(num1);
+            num2 = Math.floor(num2);
+            num3 = Math.floor(num3);
+
+            let title1 = titles[Math.floor(Math.random() * titles.length)];
+            let title2 = titles[Math.floor(Math.random() * titles.length)];
+            let title3 = titles[Math.floor(Math.random() * titles.length)];
+
+            document.getElementById('bar1').style.width = num1 + '%';
+            document.getElementById('stat-number').innerHTML = num1 + '%';
+            document.getElementById('subtext-sec2').innerHTML = title1;
+
+            document.getElementById('bar2').style.width = num2 + '%';
+            document.getElementById('stat-number1').innerHTML = num2 + '%';
+            document.getElementById('subtext-sec2-1').innerHTML = title2;
+
+            document.getElementById('bar3').style.width = num3 + '%';
+            document.getElementById('stat-number2').innerHTML = num3 + '%';
+            document.getElementById('subtext-sec2-2').innerHTML = title3;
+        }
+
+        updateBar();
+        setInterval(updateBar, 2000);
+
 document.getElementById("subtitle-sec2").innerHTML = "5G";
 document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
 document.getElementById("subtitle-sec2-1").innerHTML = "80k";
