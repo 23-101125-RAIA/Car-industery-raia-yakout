@@ -118,50 +118,52 @@ buttons.forEach(btn => {
   });
 });
 
-
-
-const faqData = [
+let faqData = [
   {
     question: "How long does it take to fully charge the car?",
     paragraphs: [
-      "Charging time depends on the charger type and the battery capacity. Home chargers typically take longer than fast public chargers.",
-      "With rapid charging stations, the battery can reach up to 80% in under 30 minutes.",
-      "Battery management systems are designed to protect long-term performance during frequent charging."
+      "Charging time depends on the charger type, battery capacity, and environmental conditions. Using a standard home charger may take several hours to fully charge the vehicle, while fast public charging stations significantly reduce charging time. Advanced battery management systems regulate power intake to ensure safety, efficiency, and long-term battery health throughout repeated charging cycles."
     ]
   },
   {
     question: "Is the car fully autonomous?",
     paragraphs: [
-      "The vehicle supports advanced driver-assistance systems designed to improve safety and comfort.",
-      "Full autonomy depends on road conditions, regulations, and driver supervision.",
-      "Software updates continuously enhance autonomous capabilities over time."
+      "The vehicle is equipped with advanced driver-assistance technologies designed to enhance safety and driving comfort. While it can handle many driving tasks automatically, full autonomy still depends on road conditions, local regulations, and active driver supervision. Continuous software updates improve system intelligence and adaptability over time."
     ]
   },
   {
     question: "How does the car communicate across systems?",
     paragraphs: [
-      "The car uses intelligent communication protocols between sensors, cameras, and onboard computers.",
-      "These systems work together to analyze surroundings in real time.",
-      "Culturally adaptive interfaces ensure clear communication across global markets."
+      "The car relies on a complex communication network connecting sensors, cameras, control units, and onboard computers. These systems exchange data in real time to analyze surroundings, predict movement, and make driving decisions. This seamless internal communication ensures accuracy, responsiveness, and a smooth driving experience across different environments."
+    ]
+  },
+  {
+    question: "What safety technologies are included?",
+    paragraphs: [
+      "The vehicle integrates multiple safety technologies such as collision avoidance, lane monitoring, adaptive cruise control, and emergency braking. These systems work together to detect potential risks and assist the driver in preventing accidents. Safety features are continuously refined through software enhancements and real-world data analysis."
+    ]
+  },
+  {
+    question: "How does the car adapt to different driving conditions?",
+    paragraphs: [
+      "The car dynamically adjusts performance based on road conditions, weather, and driving behavior. Intelligent traction control, suspension tuning, and power distribution help maintain stability and comfort. This adaptive behavior ensures reliable performance whether driving in urban traffic, highways, or challenging terrains."
     ]
   },
   {
     question: "Where can I book a test drive?",
     paragraphs: [
-      "Test drives can be booked through the official website or authorized dealerships.",
-      "Availability may vary depending on your location.",
-      "Special demo events are also held throughout the year."
+      "Test drives can be booked through the official website or at authorized dealerships. Availability may vary depending on your location and vehicle demand. Special promotional events and scheduled demonstrations are also organized throughout the year, allowing customers to experience the vehicle firsthand in a guided environment."
     ]
   }
 ];
 
-const faqContainer = document.getElementById("faqContainer");
+let faqContainer = document.getElementById("faqContainer");
 
 for (let i = 0; i < faqData.length; i++) {
   let paragraphsHTML = "";
 
   for (let j = 0; j < faqData[i].paragraphs.length; j++) {
-    paragraphsHTML += `<p class="text">${faqData[i].paragraphs[j]}</p>`;
+    paragraphsHTML += `<p class="subtext">${faqData[i].paragraphs[j]}</p>`;
   }
 
   faqContainer.innerHTML += `
@@ -176,9 +178,13 @@ for (let i = 0; i < faqData.length; i++) {
     </div>
   `;
 }
-
 for (let i = 0; i < faqData.length; i++) {
   document.getElementById(`faq-${i}`).addEventListener("click", function () {
     this.classList.toggle("active");
   });
 }
+
+
+
+
+
