@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Motors </title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <link rel="icon" type="image/png" href="img/logo.png">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,34 @@
     </ul>
 </header>
 <section class="section1">
-    
+    <p class="section1-title" id="section1-title"></p>
+<div class="hero-3d-div">
+  <model-viewer
+    class="hero-3d"
+    id="restrictedModel"
+    src="3D/hyperconcept.glb"
+
+    camera-controls
+    disable-zoom
+    disable-pan
+
+    tone-mapping="neutral"
+    environment-image="legacy"
+    shadow-intensity="1.64"
+    shadow-softness="1"
+
+    camera-orbit="-91.03deg 85.16deg 14m"
+    min-camera-orbit="-90deg 30deg 22m"
+    max-camera-orbit="-90deg 90deg 22m"
+
+    field-of-view="22deg"
+  >
+  </model-viewer>
+</div>
+
+
+
+
 </section>
 
     <script src="js.js"></script>

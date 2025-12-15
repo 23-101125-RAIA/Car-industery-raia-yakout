@@ -134,9 +134,10 @@ line-height: normal;
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+      justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 100px;
     }
     .section1-title{
        color: var(--bieg);
@@ -145,6 +146,19 @@ font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal; 
-opacity: 0.84;
+opacity: 0.9;
     }
+.hero-3d-div {
+  width: 100%;
+ overflow: hidden;
+  height: 700px;
+    position: relative;
+    top: 250px;
+   
+}
+
+.hero-3d {
+  width: 100%;
+  height: 100%;
+}
 
