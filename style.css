@@ -387,12 +387,124 @@ padding: 190px;
   transform: translate(3px, -3px) rotate(-45deg);
 }
 
-.section3 .cta-arrow {
+.cta-arrow {
   width: 19.294px;
   height: 19.294px;
   transform: rotate(-45deg);
   transition: transform 0.3s ease;
   display: inline-block;
   font-size: 20px;
-  line-height: 1;
+  line-height: 1;}
+/* 
+.slider-section {
+  padding: 80px 0;
 }
+
+.slider-viewport {
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.6s ease;
+  padding: 40px 0;
+}
+
+.card {
+  width: 430px;
+  height: 500px;
+  padding: 24px;
+  border-radius: 40px;
+  background: rgba(137,137,137,0.2);
+  backdrop-filter: blur(30px);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card.active {
+  transform: scale(1.08);
+  box-shadow: 0 30px 70px rgba(224,237,61,0.25);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circles {
+  display: flex;
+  gap: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cta-btn {
+  width: 54px;
+  height: 50px;
+  border-radius: 16px;
+  background: #E0ED3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a2e;
+  font-size: 22px;
+}
+
+.c1 { background: #A0C107; }
+.c2 { background: #ffffff; }
+.c3 { background: #E0ED3D; }
+.c4 { background: #FF6B35; }
+.c5 { background: #3B82F6; }
+.c6 { background: #DC2626; }
+.c7 { background: #1a1a2e; }
+
+.card-bottom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.cars-3d {
+  width: 330px;
+  height: 200px;
+}
+
+.slider-text {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #FFDFBE;
+  text-transform: uppercase;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.dot.active {
+  background: #E0ED3D;
+  transform: scale(1.5);
+} */

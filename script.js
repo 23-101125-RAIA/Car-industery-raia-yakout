@@ -60,6 +60,56 @@ document.getElementById("cta-sec3").innerHTML = "Pre-Order Now";
 document.getElementById("ctaa-sec3").innerHTML = "Learn More ";
 
 
+  //  let track = document.getElementById("sliderTrack");
+  // let cards = document.querySelectorAll(".card");
+  // let dots = document.querySelectorAll(".dot");
+
+  // let cardStep = 470; 
+  // let index = 0;
+  // let autoSlide;
+
+  // function updateSlider() {
+  //   track.style.transform = "translateX(-" + (index * cardStep) + "px)";
+
+  //   cards.forEach(function(card) {
+  //     card.classList.remove("active");
+  //   });
+  //   dots.forEach(function(dot) {
+  //     dot.classList.remove("active");
+  //   });
+
+  //   cards[index + 1].classList.add("active");
+  //   if (dots[index + 1]) dots[index + 1].classList.add("active");
+  // }
+
+  // function startAutoSlide() {
+  //   autoSlide = setInterval(function () {
+  //     if (index < cards.length - 3) {
+  //       index++;
+  //     } else {
+  //       index = 0;
+  //     }
+  //     updateSlider();
+  //   }, 2000);
+  // }
+
+  // dots.forEach(function(dot, i) {
+  //   dot.addEventListener("click", function () {
+  //     clearInterval(autoSlide);
+  //     index = i > 0 ? i - 1 : 0;
+  //     updateSlider();
+  //     startAutoSlide();
+  //   });
+  // });
+
+  // updateSlider();
+  // startAutoSlide();
+
+  
+
+
+
+
 
 
 
