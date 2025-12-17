@@ -1139,7 +1139,7 @@ top: 40px;
 
 .p2-section2 {
   width: 100%;
-  padding: 100px;
+  padding: 100px 200px;
   display: flex;
   flex-direction: column;
   gap: 70px;
@@ -1167,6 +1167,78 @@ justify-content: space-between;  align-items: flex-start;
   gap: 25px;
   flex-direction: column;
 }
+
+
+
+.section5-left,
+.section5-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.section5-icon{ width: 44.012px; height: auto; }
+
+
+
+.p2-section5-cards{
+  display: flex;
+  gap: 30px;
+}
+
+
+.p2-section5-card{
+  width: 340px;
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 14px;
+  border: 0.7px solid var(--glass-br);
+  background: var(--glass);
+  backdrop-filter: blur(26px);
+    
+
+}
+
+
+.p2-section5-big-card{
+  width: 100%;
+  height: 637px;
+  padding: 60px 0;
+  border-radius: 18px;
+  border: 0.7px solid var(--glass-br);
+  background: var(--glass);
+  backdrop-filter: blur(26px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+    align-items: center;
+  justify-content: center;
+
+}
+
+
+.p2-section5-model-frame{
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p2-section5-3d{
+width: 100%;
+    height: 100%;
+  position: relative;
+ 
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+
 
 
 

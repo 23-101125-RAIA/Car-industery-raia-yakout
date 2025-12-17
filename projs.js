@@ -41,9 +41,9 @@ const heroModel = document.getElementById("P2-section1Model");
 const heroButtons = document.querySelectorAll(".cta-text");
 
 const positions = {
-  front: "0deg 75deg 1.8m",
+  front: "0deg 75deg 3m",
   side: "90deg 75deg 1.8m",
-  back: "180deg 75deg 1.8m"
+  back: "180deg 75deg 3m"
 };
 
 heroModel.addEventListener("load", () => {
@@ -69,3 +69,19 @@ document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
 document.getElementById("cta-sec3").innerHTML = "Register Now";
 document.querySelector("#ctaa-sec3 .ctaa-text").innerHTML = "Contact Us";
 document.querySelector("#ctaa-sec3 .cta-arrow").innerHTML = "→";
+
+
+document.getElementById("title-sec5").innerHTML = "Premium Wheel Technology";
+document.getElementById("desc-sec5").innerHTML =
+  "Crafted to deliver maximum grip and endurance, the German-engineered tire enhances stability at high speeds and ensures optimal traction in sharp turns. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads."
+
+
+document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
+document.getElementById("card1-text").innerHTML =
+  "Reduced air drag for maximum performance.";
+
+document.getElementById("card2-title").innerHTML = "Sustainable Materials";
+document.getElementById("card2-text").innerHTML =
+  "Advanced AI durability with minimal waste.";
+
+document.getElementById("bigcard-title").innerHTML = "Smart  Car Motor";
