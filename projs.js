@@ -43,3 +43,23 @@ document.getElementById("mobile-link2").innerHTML = "Products";
 document.getElementById("mobile-link3").innerHTML = "Event";
 document.getElementById("mobile-link4").innerHTML = "About";
 
+const heroModel = document.getElementById("P2-section1Model");
+const heroButtons = document.querySelectorAll(".P2-cta-text");
+
+if (heroModel && heroButtons.length) {
+  const positions = {
+    front: "0deg 75deg 5m",
+    side: "90deg 75deg 5m",
+    back: "180deg 75deg 5m"
+  };
+
+  heroModel.setAttribute("camera-orbit", positions.back);
+
+  heroButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      heroButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      heroModel.setAttribute("camera-orbit", positions[btn.dataset.pos]);
+    });
+  });
+}

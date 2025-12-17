@@ -39,6 +39,9 @@
 </div>
 <section class="P2-section1">
 
+ 
+  <div class="P2-back-arrow" onclick="window.location.href='index.html'">&#8592;</div>
+
   <div class="P2-section1-hero-card">
 
     <div class="P2-section1-model-frame">
@@ -50,8 +53,8 @@
         disable-zoom
         disable-pan
         disable-tap
-        camera-controls="false"
-        camera-orbit="-90deg 80deg 5m"
+        camera-controls
+        camera-orbit="0deg 75deg 5m"
         field-of-view="22deg"
         disable-tab
       >
@@ -64,7 +67,7 @@
     <div class="P2-section1-cta-row">
       <button class="P2-cta-text" id="P2-view-front" data-pos="front">Front</button>
       <button class="P2-cta-text" id="P2-view-side" data-pos="side">Side</button>
-      <button class="P2-cta-text P2-back" id="P2-view-back" data-pos="back">Back</button>
+      <button class="P2-cta-text active" id="P2-view-back" data-pos="back">Back</button>
     </div>
 
   </div>

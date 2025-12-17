@@ -1056,10 +1056,24 @@ margin-top: 100px;
 
 .P2-section1 {
   width: 100%;
-  padding: 80px 200px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.P2-back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 42px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.P2-back-arrow:hover {
+  color: var(--cta);
 }
 
 .P2-section1-hero-card {
@@ -1070,8 +1084,6 @@ margin-top: 100px;
   border: 0.7px solid var(--glass-br);
   background: var(--glass);
   backdrop-filter: blur(26px);
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1081,20 +1093,17 @@ margin-top: 100px;
 
 .P2-section1-model-frame {
   width: 100%;
-  height: 420px;
+  height: 500px;
   overflow: hidden;
   position: relative;
 }
 
 .P2-section1-3d {
-  width: 179%;
+  width: 100%;
   height: 100%;
-  position: absolute;
-  left: 70%;
-  transform: translateX(-50%);
   transition: transform 0.6s ease;
-  pointer-events: none;
 }
+
 
 .P2-section1-cta-row {
   display: flex;
@@ -1115,16 +1124,6 @@ margin-top: 100px;
 .P2-cta-text.active {
   background: var(--cta);
   color: var(--black);
-}
-
-.P2-back {
-  font-weight: bold;
-  width: 42px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 
