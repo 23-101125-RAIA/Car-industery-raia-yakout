@@ -1366,7 +1366,69 @@ padding: 0 0 100px;
   border: 2px solid var(--cta);
   animation: sonar 2s infinite;
 }
+.section8 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 190px;
+  background: var(--dark-bg);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  gap: 60px;
+}
 
+.section8-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section8-middle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section8-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.section8-bottom-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section8-bottom-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section8-model {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--glass);
+  border: 2px solid var(--glass-br);
+}
+
+.section8-model model-viewer {
+  width: 100%;
+  height: 100%;
+}
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);

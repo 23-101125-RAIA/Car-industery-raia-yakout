@@ -10,6 +10,65 @@ document.getElementById("nav-link2").innerHTML = "Products";
 document.getElementById("nav-link3").innerHTML = "Event";
 document.getElementById("nav-link4").innerHTML = "About";
 
+document.getElementById("mobile-link1").innerHTML = "Home";
+document.getElementById("mobile-link2").innerHTML = "Products";
+document.getElementById("mobile-link3").innerHTML = "Event";
+document.getElementById("mobile-link4").innerHTML = "About";
+
+document.getElementById("P2-view-front").innerHTML = "Front";
+document.getElementById("P2-view-side").innerHTML = "Side";
+document.getElementById("P2-view-back").innerHTML = "Back";
+
+document.getElementById("title-sec2").innerHTML = "LOTUS EVORA GT";
+document.getElementById("text-sec2").innerHTML = "The Lotus Evora GT blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
+
+document.getElementById("subtitle-sec2").innerHTML = "5G";
+document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
+document.getElementById("subtitle-sec2-1").innerHTML = "80k";
+document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
+
+document.getElementById("cta-sec3").innerHTML = "Register Now";
+document.querySelector("#ctaa-sec3 .ctaa-text").innerHTML = "Contact Us";
+document.querySelector("#ctaa-sec3 .cta-arrow").innerHTML = "→";
+
+document.getElementById("title-sec6").innerHTML = "Wheel Options";
+document.getElementById("title1-sec6-card1").innerHTML = "Germany Simen Tire";
+document.getElementById("title1-sec6-card2").innerHTML = "Japan Sport Drift Tire";
+document.getElementById("title1-sec6-card3").innerHTML = "Italy Racing Tire";
+
+document.getElementById("title-sec5").innerHTML = "Premium Wheel Technology";
+document.getElementById("desc-sec5").innerHTML = "Crafted to deliver maximum grip and endurance, the German-engineered improves handling during rapid acceleration and tire enhances stability at high speeds and ensures optimal traction in sharp turns and a smoother ride on both track and street.. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads.";
+
+document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
+document.getElementById("card1-text").innerHTML = "Reduced air drag for maximum performance.";
+
+document.getElementById("card2-title").innerHTML = "Sustainable Materials";
+document.getElementById("card2-text").innerHTML = "Advanced AI durability with minimal waste.";
+
+document.getElementById("bigcard-title").innerHTML = "Smart  Car Motor";
+
+document.getElementById("bigcard-title-1").innerHTML = "Smart Wing System";
+
+document.getElementById("title-sec5-1").innerHTML = "Aerodynamic Rear Wing System";
+document.getElementById("desc-sec5-1").innerHTML = "The rear wing generates controlled downforce that stabilizes the car at high speeds and improves handling during rapid acceleration. Designed for airflow efficiency, it reduces drag while keeping the vehicle planted firmly to the ground. This system ensures sharper control, superior cornering, and a smoother ride on both track and street. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks .";
+
+document.getElementById("card1-title-1").innerHTML = "Airflow Efficiency";
+document.getElementById("card1-text-1").innerHTML = "Reduced air drag for maximum performance.";
+
+document.getElementById("card2-title-1").innerHTML = "Vehicle Materials";
+document.getElementById("card2-text-1").innerHTML = "Advanced AI durability with minimal waste.";
+
+document.getElementById("card2-title-2").innerHTML = "Rapid Acceleration";
+document.getElementById("card2-text-2").innerHTML = "Advanced AI durability with minimal waste.";
+
+document.getElementById("title-sec7").innerHTML = "Motor Technology & Labels";
+
+document.getElementById("hotspot1-title").innerHTML = "Turbo Air Intake";
+document.getElementById("hotspot1-desc").innerHTML = "Turbo Air Intake – Channels compressed air into the engine for higher torque and faster acceleration.";
+
+document.getElementById("hotspot2-title").innerHTML = "High- Cooling Core";
+document.getElementById("hotspot2-desc").innerHTML = "Advanced cooling system that maintains optimal engine temperature during high-performance operations.";
+
 document.getElementById("footer-brand-name").innerHTML = "Dragon Motors";
 document.getElementById("footer-company").innerHTML = "Company";
 document.getElementById("footer-about").innerHTML = "About Us";
@@ -21,6 +80,7 @@ document.getElementById("footer-support").innerHTML = "Support";
 document.getElementById("footer-faqs").innerHTML = "FAQs";
 document.getElementById("footer-contact").innerHTML = "Contact";
 document.getElementById("footer-subtitle").innerHTML = "READY TO DRIVE THE FUTURE?";
+document.getElementById("footer-input").placeholder = "Enter your Email";
 document.querySelector("#ctaa-sec55 .footer-cta-text").innerHTML = "Subscribe";
 document.querySelector("#ctaa-sec55 .footer-cta-arrow").innerHTML = "→";
 document.getElementById("footer-copy").innerHTML = "© Copyright 2024, All Rights Reserved by Exline";
@@ -31,11 +91,6 @@ let mobileMenu = document.getElementById("mobileMenu");
 burger.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
-
-document.getElementById("mobile-link1").innerHTML = "Home";
-document.getElementById("mobile-link2").innerHTML = "Products";
-document.getElementById("mobile-link3").innerHTML = "Event";
-document.getElementById("mobile-link4").innerHTML = "About";
 
 const heroModel = document.getElementById("P2-section1Model");
 const heroButtons = document.querySelectorAll(".cta-text");
@@ -59,52 +114,7 @@ heroButtons.forEach(btn => {
   });
 });
 
-document.getElementById("subtitle-sec2").innerHTML = "5G";
-document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
-document.getElementById("subtitle-sec2-1").innerHTML = "80k";
-document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
-
-
-
-document.getElementById("cta-sec3").innerHTML = "Register Now";
-document.querySelector("#ctaa-sec3 .ctaa-text").innerHTML = "Contact Us";
-document.querySelector("#ctaa-sec3 .cta-arrow").innerHTML = "→";
-
-
-document.getElementById("title-sec5").innerHTML = "Premium Wheel Technology";
-document.getElementById("desc-sec5").innerHTML =
-  "Crafted to deliver maximum grip and endurance, the German-engineered improves handling during rapid acceleration and tire enhances stability at high speeds and ensures optimal traction in sharp turns and a smoother ride on both track and street.. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads."
-
-
-document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
-document.getElementById("card1-text").innerHTML =
-  "Reduced air drag for maximum performance.";
-
-document.getElementById("card2-title").innerHTML = "Sustainable Materials";
-document.getElementById("card2-text").innerHTML =
-  "Advanced AI durability with minimal waste.";
-
-document.getElementById("bigcard-title-1").innerHTML = "Smart Wing System";
-
-document.getElementById("title-sec5-1").innerHTML = "Aerodynamic Rear Wing System";
-document.getElementById("desc-sec5-1").innerHTML =
-  "The rear wing generates controlled downforce that stabilizes the car at high speeds and improves handling during rapid acceleration. Designed for airflow efficiency, it reduces drag while keeping the vehicle planted firmly to the ground. This system ensures sharper control, superior cornering, and a smoother ride on both track and street. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks ."
-
-
-document.getElementById("card1-title-1").innerHTML = "Airflow Efficiency";
-document.getElementById("card1-text-1").innerHTML =
-  "Reduced air drag for maximum performance.";
-
-document.getElementById("card2-title-1").innerHTML = "Vehicle Materials";
-document.getElementById("card2-text-1").innerHTML =
-  "Advanced AI durability with minimal waste.";
-
-document.getElementById("bigcard-title").innerHTML = "Smart  Car Motor";
-document.getElementById("card2-title-2").innerHTML = "Rapid Acceleration";
-document.getElementById("card2-text-2").innerHTML =
-  "Advanced AI durability with minimal waste.";
-
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const hotspots = document.querySelectorAll('.hotspot');
   
   hotspots.forEach((hotspot) => {
