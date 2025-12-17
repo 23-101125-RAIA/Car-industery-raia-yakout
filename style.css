@@ -1097,7 +1097,7 @@ margin-top: 100px;
 
 .P2-back-arrow {
 
-
+margin-right: 111px;
   cursor: pointer;
   transition: 0.3s;
   z-index: 10;
@@ -1561,7 +1561,44 @@ transform: translateY(120px);
         padding: 80px 50px;
     }
     
+  .P2-section1 {
+        padding: 157px 50px 100px;
+    }
+    
+    .P2-section1-hero-card {
+        max-width: calc(100% - 100px);
+    }
+    
+    .p2-section2 {
+        padding: 100px 100px;
+    }
+    
+    .p2-section6 {
+        padding: 0 0 80px;
+    }
+    
+    .p2-section6-div {
+        gap: 30px;
+    }
+    
+    .p2-card {
+        width: 28%;
+    }
+    
+    .p2-section7 {
+        padding: 80px;
+    }
+    
+    .p2-card-section7 {
+        width: 100%;
+        max-width: 1300px;
+    }
+    
+    .section8 {
+        padding: 100px 100px;
+    }
 }
+
 
 
 @media (min-width: 501px) and (max-width: 900px) {
@@ -1823,6 +1860,145 @@ transform: translateY(120px);
 
     .slider-viewport::-webkit-scrollbar {
         display: none;
+    }
+    .P2-section1 {
+        padding: 120px 40px 80px;
+        height: auto;
+    }
+    
+    .P2-section1-hero-card {
+        max-width: 100%;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .P2-top-header {
+        padding: 0 20px;
+    }
+    
+    .P2-title {
+        font-size: 36px;
+    }
+    
+    .P2-section1-model-frame {
+        height: 400px;
+    }
+    
+    .model-framep2 {
+        height: 400px;
+    }
+    
+    .P2-section1-cta-row {
+        gap: 12px;
+    }
+    
+    .p2-section2 {
+        padding: 80px 40px;
+        gap: 50px;
+    }
+    
+    .p2-section2-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .p2-section2-middle {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .p2-section2-middle .text {
+        width: 100%;
+    }
+    
+    .section5-leftp2,
+    .section5-rightp2 {
+        width: 100%;
+        gap: 50px;
+    }
+    
+    .p2-section5-cards {
+        flex-direction: column;
+    }
+    
+    .p2-section5-card {
+        width: 100%;
+        height: auto;
+    }
+    
+    .p2-section5-big-card {
+        height: 500px;
+        padding: 40px 0;
+    }
+    
+    .p2-section5-model-frame {
+        height: 400px;
+    }
+    
+    .p2-section6 {
+        padding: 0 0 80px;
+    }
+    
+    .p2-section6-div {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .p2-card {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+    
+    .wheel3d {
+        width: 100%;
+        height: 350px;
+    }
+    
+    .p2-section7 {
+        padding: 80px 40px;
+    }
+    
+    .p2-card-section7 {
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+        padding: 40px 20px;
+        gap: 50px;
+    }
+    
+    .hotspot-label {
+        max-width: 250px;
+        padding: 12px 16px;
+    }
+    
+    .section8 {
+        padding: 80px 40px;
+    }
+    
+    .section8-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .section8-bottom {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .section8-bottom-left {
+        width: 100%;
+    }
+    
+    .section8-bottom-right {
+        width: 100%;
+    }
+    
+    .section8-model {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        transform: translateY(0);
     }
 }
 
@@ -2238,6 +2414,175 @@ transform: translateY(120px);
         display: none;
     }
 
+ .P2-section1 {
+        padding: 90px 20px 60px;
+        height: auto;
+    }
+    
+    .P2-section1-hero-card {
+        max-width: 100%;
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .P2-top-header {
+        padding: 0 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .P2-back-arrow img {
+        width: 30px;
+    }
+    
+    .P2-title {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .circles {
+        gap: 8px;
+    }
+    
+    .P2-section1-model-frame {
+        height: 300px;
+    }
+    
+    .model-framep2 {
+        height: 300px;
+    }
+    
+    .P2-section1-cta-row {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .p2-section2 {
+        padding: 60px 20px;
+        gap: 40px;
+    }
+    
+    .p2-section2-top {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .p2-section2-middle {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .p2-section2-middle .text {
+        width: 100%;
+    }
+    
+    .section5-leftp2,
+    .section5-rightp2 {
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .p2-section5-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .p2-section5-card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .p2-section5-big-card {
+        height: 400px;
+        padding: 30px 0;
+    }
+    
+    .p2-section5-model-frame {
+        height: 300px;
+    }
+    
+    .p2-section6 {
+        padding: 0 0 60px;
+    }
+    
+    .p2-section6-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .p2-card {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .wheel3d {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .p2-section7 {
+        padding: 60px 20px;
+    }
+    
+    .p2-card-section7 {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        padding: 30px 15px;
+        gap: 40px;
+    }
+    
+    .hotspot-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hotspot-top .hotspot-wrapper,
+    .hotspot-bottom .hotspot-wrapper {
+        flex-direction: column;
+    }
+    
+    .hotspot-label {
+        max-width: 200px;
+        padding: 10px 14px;
+    }
+    
+    .hotspot-dot {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .section8 {
+        padding: 60px 20px;
+        gap: 40px;
+    }
+    
+    .section8-top {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .section8-bottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .section8-bottom-left {
+        width: 100%;
+    }
+    
+    .section8-bottom-right {
+        width: 100%;
+    }
+    
+    .section8-model {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        transform: translateY(0);
+    }
 }
 
 
@@ -2422,4 +2767,64 @@ transform: translateY(120px);
 
     .slider-viewport::-webkit-scrollbar {
         display: none;
-    }}
+    }
+    .P2-section1 {
+        padding: 80px 15px 50px;
+    }
+    
+    .P2-section1-hero-card {
+        padding: 20px 12px;
+        gap: 20px;
+    }
+    
+    .P2-title {
+        font-size: 20px;
+    }
+    
+    .P2-section1-model-frame {
+        height: 250px;
+    }
+    
+    .model-framep2 {
+        height: 250px;
+    }
+    
+    .p2-section2 {
+        padding: 50px 15px;
+    }
+    
+    .p2-section5-big-card {
+        height: 350px;
+        padding: 25px 0;
+    }
+    
+    .p2-section5-model-frame {
+        height: 250px;
+    }
+    
+    .p2-card {
+        padding: 25px 15px;
+    }
+    
+    .wheel3d {
+        height: 250px;
+    }
+    
+    .p2-section7 {
+        padding: 50px 15px;
+    }
+    
+    .p2-card-section7 {
+        min-height: 450px;
+        padding: 25px 12px;
+        gap: 35px;
+    }
+    
+    .section8 {
+        padding: 50px 15px;
+    }
+    
+    .section8-model {
+        height: 350px;
+    }
+}
