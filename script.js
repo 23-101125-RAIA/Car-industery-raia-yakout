@@ -240,84 +240,59 @@ document.getElementById("footer-subtitle").innerHTML =
 document.getElementById("footer-copy").innerHTML =
   "© Copyright 2024, All Rights Reserved by Exline";
 
-   let sliderTrack = document.getElementById('sliderTrack');
-        let dots = document.querySelectorAll('.dot');
-        let currentGroup = 0;
-        let autoSlideInterval;
-        let isAnimating = false;
+let sliderTrack = document.getElementById('sliderTrack');
+let sliderViewport = document.querySelector('.slider-viewport');
+let dotsContainer = document.querySelector('.dots');
 
-        let cardWidth = 430;
-        let gap = 40;
-        let groupSize = 3;
-        let slideDistance = (cardWidth + gap) * groupSize;
+let cards = document.querySelectorAll('.card');
+let dots = [];
+let currentIndex = 0;
+const gap = 40; 
+const cardWidth = 430; 
+const totalCards = cards.length;
 
-        function updateDots() {
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentGroup);
-            });
-        }
 
-        function slideToGroup(groupIndex, smooth = true) {
-            if (isAnimating) return;
-            
-            isAnimating = true;
-            let targetPosition = -(groupIndex * slideDistance);
-            
-            if (smooth) {
-                sliderTrack.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            } else {
-                sliderTrack.style.transition = 'none';
-            }
-            
-            sliderTrack.style.transform = `translateX(${targetPosition}px)`;
-            
-            setTimeout(() => {
-                if (groupIndex === 3) {
-                    sliderTrack.style.transition = 'none';
-                    currentGroup = 0;
-                    sliderTrack.style.transform = `translateX(0px)`;
-                    updateDots();
-                } else {
-                    currentGroup = groupIndex;
-                    updateDots();
-                }
-                isAnimating = false;
-            }, 800);
-        }
+dotsContainer.innerHTML = '';
+for (let i = 0; i < totalCards; i++) {
+    let dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+}
 
-        function startAutoSlide() {
-            stopAutoSlide();
-            autoSlideInterval = setInterval(() => {
-                let nextGroup = currentGroup + 1;
-                slideToGroup(nextGroup);
-            }, 3000);
-        }
 
-        function stopAutoSlide() {
-            if (autoSlideInterval) {
-                clearInterval(autoSlideInterval);
-            }
-        }
+function updateDots(index) {
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
 
-      
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                stopAutoSlide();
-                let groupIndex = parseInt(dot.dataset.index);
-                slideToGroup(groupIndex);
-                setTimeout(() => {
-                    startAutoSlide();
-                }, 3000);
-            });
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        sliderViewport.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: 'smooth'
         });
+    });
+});
 
 
-        updateDots();
-        startAutoSlide();
+sliderViewport.addEventListener('scroll', () => {
+    const scrollLeft = sliderViewport.scrollLeft;
+ 
+    const index = Math.round(scrollLeft / (cardWidth + gap));
+    if (index !== currentIndex) {
+        currentIndex = index;
+        updateDots(currentIndex);
+    }
+});
 
-   
-        sliderTrack.addEventListener('mouseenter', stopAutoSlide);
-        sliderTrack.addEventListener('mouseleave', startAutoSlide);
+
+updateDots(currentIndex);
+
 
 
 document.getElementById("id1").innerHTML = "↗";
@@ -338,3 +313,16 @@ document.getElementById("id15").innerHTML = "↗";
 document.getElementById("id16").innerHTML = "Audi<br>R8 LMS Ultra";
 document.getElementById("id17").innerHTML = "↗";
 document.getElementById("id18").innerHTML = "Aston Martin<br>Vulcan";
+
+  let burger = document.querySelector(".image");
+  let mobileMenu = document.getElementById("mobileMenu");
+
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  document.getElementById("mobile-link1").innerHTML = "Home";
+document.getElementById("mobile-link2").innerHTML = "Products";
+document.getElementById("mobile-link3").innerHTML = "Event";
+document.getElementById("mobile-link4").innerHTML = "About";
+
