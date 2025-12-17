@@ -73,7 +73,7 @@ document.querySelector("#ctaa-sec3 .cta-arrow").innerHTML = "→";
 
 document.getElementById("title-sec5").innerHTML = "Premium Wheel Technology";
 document.getElementById("desc-sec5").innerHTML =
-  "Crafted to deliver maximum grip and endurance, the German-engineered tire enhances stability at high speeds and ensures optimal traction in sharp turns. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads."
+  "Crafted to deliver maximum grip and endurance, the German-engineered improves handling during rapid acceleration and tire enhances stability at high speeds and ensures optimal traction in sharp turns and a smoother ride on both track and street.. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads."
 
 
 document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
@@ -84,4 +84,22 @@ document.getElementById("card2-title").innerHTML = "Sustainable Materials";
 document.getElementById("card2-text").innerHTML =
   "Advanced AI durability with minimal waste.";
 
+document.getElementById("bigcard-title-1").innerHTML = "Smart Wing System";
+
+document.getElementById("title-sec5-1").innerHTML = "Aerodynamic Rear Wing System";
+document.getElementById("desc-sec5-1").innerHTML =
+  "The rear wing generates controlled downforce that stabilizes the car at high speeds and improves handling during rapid acceleration. Designed for airflow efficiency, it reduces drag while keeping the vehicle planted firmly to the ground. This system ensures sharper control, superior cornering, and a smoother ride on both track and street. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks ."
+
+
+document.getElementById("card1-title-1").innerHTML = "Airflow Efficiency";
+document.getElementById("card1-text-1").innerHTML =
+  "Reduced air drag for maximum performance.";
+
+document.getElementById("card2-title-1").innerHTML = "Vehicle Materials";
+document.getElementById("card2-text-1").innerHTML =
+  "Advanced AI durability with minimal waste.";
+
 document.getElementById("bigcard-title").innerHTML = "Smart  Car Motor";
+document.getElementById("card2-title-2").innerHTML = "Rapid Acceleration";
+document.getElementById("card2-text-2").innerHTML =
+  "Advanced AI durability with minimal waste.";
