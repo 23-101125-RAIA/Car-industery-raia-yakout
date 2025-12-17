@@ -235,8 +235,9 @@ document.getElementById("footer-faqs").innerHTML = "FAQs";
 document.getElementById("footer-contact").innerHTML = "Contact";
 document.getElementById("footer-subtitle").innerHTML =
   "READY TO DRIVE THE FUTURE?";
-  document.getElementById("ctaa-sec55").innerHTML =
-  'Subscribe <span class="footer-cta-arrow">→</span>';
+document.querySelector("#ctaa-sec55 .footer-cta-text").innerHTML = "Subscribe";
+document.querySelector("#ctaa-sec55 .footer-cta-arrow").innerHTML = "→";
+
 document.getElementById("footer-copy").innerHTML =
   "© Copyright 2024, All Rights Reserved by Exline";
 
