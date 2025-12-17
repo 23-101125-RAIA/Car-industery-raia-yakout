@@ -64,3 +64,16 @@ heroButtons.forEach(btn => {
     heroModel.setAttribute("camera-orbit", positions[btn.dataset.pos]);
   });
 });
+
+document.getElementById("subtitle-sec2").innerHTML = "5G";
+document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
+document.getElementById("subtitle-sec2-1").innerHTML = "80k";
+document.getElementById("subtext-sec2-4").innerHTML = "Fast-Charging System";
+document.getElementById("subtitle-sec2-2").innerHTML = "360°";
+document.getElementById("subtext-sec2-5").innerHTML = "Surround Sensor Vision";
+
+
+document.getElementById("cta-sec3").innerHTML = "Register Now";
+document.getElementById("ctaa-sec3").innerHTML =
+  'Contact Us <span class="cta-arrow">→</span>';
+
