@@ -103,3 +103,29 @@ document.getElementById("bigcard-title").innerHTML = "Smart  Car Motor";
 document.getElementById("card2-title-2").innerHTML = "Rapid Acceleration";
 document.getElementById("card2-text-2").innerHTML =
   "Advanced AI durability with minimal waste.";
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const hotspots = document.querySelectorAll('.hotspot');
+  
+  hotspots.forEach((hotspot) => {
+    hotspot.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      this.classList.toggle('active');
+      
+      hotspots.forEach((other) => {
+        if (other !== this) {
+          other.classList.remove('active');
+        }
+      });
+    });
+  });
+  
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.hotspot')) {
+      hotspots.forEach(hotspot => {
+        hotspot.classList.remove('active');
+      });
+    }
+  });
+});
