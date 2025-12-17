@@ -1061,7 +1061,7 @@ margin-top: 100px;
 
 .P2-section1 {
   width: 100%;
-  padding: 157px 100px;
+  padding: 157px 100px 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1235,32 +1235,63 @@ justify-content: space-between;  align-items: flex-start;
   position: relative;
   transition: transform 0.6s ease;
   pointer-events: auto;
-}
-.p2-section6{
- width: 100%;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
-  height: 100vh;
+}.p2-section6{ 
+ width: 100%; 
+
+  display: flex; 
+padding: 0 0 100px;
+  align-items: center; 
+  box-sizing: border-box; 
+  height: auto; 
+  gap: 30px; 
+  flex-direction: column; 
+} 
+
+.p2-card{ 
+    width: 25%; 
+    height: 450px; 
+    border-radius: 18.434px; 
+    border: 1.536px solid var(--glass-br); 
+    background: var(--glass); 
+    display: flex; 
+    align-content: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 50px; 
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+
+.p2-card:hover{
+    transform: translateY(-10px);
+    border-color: var(--cta);
 }
 
-.p2-section6-div{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+.p2-section6-div{ 
+  width: 100%; 
+  height: auto; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+} 
+ 
+.wheel3d{ 
+    width: 325.604px; 
+    height: 422px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+} 
 
-.wheel3d{
-  width: 325.604px;
-  height: 422px;
+.wheel3d model-viewer { 
+  width: 100%; 
+  height: 100%; 
 }
-
 
 
 
