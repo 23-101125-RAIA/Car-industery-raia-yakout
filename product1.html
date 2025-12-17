@@ -41,35 +41,47 @@
 
   <div class="P2-section1-hero-card">
 
-   
-    <div class="P2-back-arrow" onclick="window.location.href='index.html'"> <img src="img/bk.png" alt=""></div>
+    <div class="P2-top-header">
+      <div class="P2-back-arrow" onclick="window.location.href='index.html'">
+        <img src="img/bk.png" alt="">
+      </div>
 
-    <div class="P2-section1-model-frame">
+      <h2 class="P2-title" id="title-sec2"></h2>
+
+
+ 
+     <div class="circles">
+      <div class="circle c1"></div>
+      <div class="circle c3"></div>
+    </div>
+
+    
+    </div>
+
     <div class="P2-section1-model-frame">
       <div class="model-framep2">
-<model-viewer
-  id="P2-section1Model"
-  class="P2-section1-3d"
-  src="3D/2022_lotus_emira_gt4.glb"
-  disable-zoom
-  disable-pan
-  disable-tap
-  camera-controls
-  field-of-view="22deg"
-  disable-tab
->
-  <div class="progress-bar hide" slot="progress-bar">
-    <div class="update-bar"></div>
-  </div>
-</model-viewer>
-</div></div>
-
+        <model-viewer
+          id="P2-section1Model"
+          class="P2-section1-3d"
+          src="3D/2022_lotus_emira_gt4.glb"
+          disable-zoom
+          disable-pan
+          disable-tap
+          camera-controls
+          field-of-view="22deg"
+          disable-tab
+        >
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+        </model-viewer>
+      </div>
     </div>
 
     <div class="P2-section1-cta-row">
-      <button class="cta-text " id="P2-view-front" data-pos="front"></button>
-      <button class="cta-text" id="P2-view-side" data-pos="side"></button>
-      <button class="cta-text" id="P2-view-back" data-pos="back"></button>
+      <button class="cta-text" id="P2-view-front" data-pos="front">Front</button>
+      <button class="cta-text" id="P2-view-side" data-pos="side">Side</button>
+      <button class="cta-text" id="P2-view-back" data-pos="back">Back</button>
     </div>
 
   </div>
@@ -78,14 +90,7 @@
 
 <section class="p2-section2">
 
-  <div class="p2-section2-top">
-    <h2 class="title" id="title-sec2"></h2>
-
-    <div class="circles">
-      <div class="circle c1"></div>
-      <div class="circle c3"></div>
-    </div>
-  </div>
+ 
 
   <div class="p2-section2-middle">
 
@@ -371,34 +376,31 @@
 </section>
 
 <section class="section8">
-  <!-- Top Dev - Title and CTAs -->
+ 
   <div class="section8-top">
-    <p class="title">Privacy & Registration Policy</p>
+    <p class="title" id="title-sec8"></p>
     <div class="cta-div">
-      <button class="cta">Get Started</button>
-      <button class="ctaa">
-        Learn More
-        <span class="cta-arrow">→</span>
+      <button class="cta" id="cta-sec8"></button>
+      <button class="ctaa" id="ctaa-sec8">
+        <span class="ctaa-text-sec8"></span>
+        <span class="cta-arrow"></span>
       </button>
     </div>
   </div>
 
   
   <div class="section8-middle">
-    <p class="text">We prioritize your privacy and security. Our registration process is designed to protect your personal information while providing you with seamless access to our services.</p>
-    <p class="text">All data collected during registration is encrypted and stored securely. We never share your information with third parties without your explicit consent. Review our complete privacy policy for detailed information.</p>
+    <p class="text" id="text-sec8-1"></p>
+    <p class="text" id="text-sec8-2"></p>
   </div>
 
 
   <div class="section8-bottom">
     <div class="section8-bottom-left">
-      <p class="text1">Experience Innovation</p>
-      <p class="text">Full encryption of all personal and vehicle-related data.<br><br>
-
-Restricted internal access, limited only to verified service teams.<br><br>
-
-No third-party sharing, ensuring complete confidentiality.</p>
+      <p class="text1" id="text1-sec8-bottom"></p>
+      <p class="text" id="text-sec8-bottom"></p>
     </div>
+  
     <div class="section8-bottom-right">
       <div class="section8-model">
         <model-viewer 

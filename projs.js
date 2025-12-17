@@ -85,6 +85,15 @@ document.querySelector("#ctaa-sec55 .footer-cta-text").innerHTML = "Subscribe";
 document.querySelector("#ctaa-sec55 .footer-cta-arrow").innerHTML = "→";
 document.getElementById("footer-copy").innerHTML = "© Copyright 2024, All Rights Reserved by Exline";
 
+document.getElementById("title-sec8").innerHTML = "Privacy & Registration Policy";
+document.getElementById("cta-sec8").innerHTML = "Get Started";
+document.querySelector("#ctaa-sec8 .ctaa-text-sec8").innerHTML = "Learn More";
+document.querySelector("#ctaa-sec8 .cta-arrow").innerHTML = "→";
+document.getElementById("text-sec8-1").innerHTML = "We prioritize your privacy and security. Our registration process is designed to protect your personal information while providing you with seamless access to our services.";
+document.getElementById("text-sec8-2").innerHTML = "All data collected during registration is encrypted and stored securely. We never share your information with third parties without your explicit consent. Review our complete privacy policy for detailed information.";
+document.getElementById("text1-sec8-bottom").innerHTML = "Experience Innovation";
+document.getElementById("text-sec8-bottom").innerHTML = "Full encryption of all personal and vehicle-related data.<br><br>Restricted internal access, limited only to verified service teams.<br><br>No third-party sharing, ensuring complete confidentiality.";
+
 let burger = document.querySelector(".image");
 let mobileMenu = document.getElementById("mobileMenu");
 
