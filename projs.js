@@ -44,22 +44,23 @@ document.getElementById("mobile-link3").innerHTML = "Event";
 document.getElementById("mobile-link4").innerHTML = "About";
 
 const heroModel = document.getElementById("P2-section1Model");
-const heroButtons = document.querySelectorAll(".P2-cta-text");
+const heroButtons = document.querySelectorAll(".cta-text");
 
-if (heroModel && heroButtons.length) {
-  const positions = {
-    front: "0deg 75deg 5m",
-    side: "90deg 75deg 5m",
-    back: "180deg 75deg 5m"
-  };
+const positions = {
+  front: "0deg 75deg 7.25m",
+  side: "90deg 75deg 7.25m",
+  back: "180deg 75deg 7.25m"
+};
 
-  heroModel.setAttribute("camera-orbit", positions.back);
+heroModel.addEventListener("load", () => {
+  heroModel.setAttribute("camera-orbit", "40deg 68deg 7.25m"); 
+});
 
-  heroButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      heroButtons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      heroModel.setAttribute("camera-orbit", positions[btn.dataset.pos]);
-    });
+heroButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    heroButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    heroModel.setAttribute("camera-orbit", positions[btn.dataset.pos]);
   });
-}
+});
