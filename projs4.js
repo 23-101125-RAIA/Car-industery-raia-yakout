@@ -46,8 +46,8 @@ document.getElementById("P2-view-back").innerHTML = "Back";
 
 const path = window.location.pathname;
 if (path.includes('product3.html') || !path.includes('product')) {
-  document.getElementById("title-sec2").innerHTML = "McLaren Sienna";
-  document.getElementById("text-sec2").innerHTML = "McLaren Sienna blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
+  document.getElementById("title-sec2").innerHTML = "Nissan GT-R Premium";
+  document.getElementById("text-sec2").innerHTML = "Nissan GT-R Premium blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
 }
 
 document.getElementById("subtitle-sec2").innerHTML = "5G";
@@ -134,7 +134,7 @@ let heroButtons = document.querySelectorAll(".cta-text");
 
 let positions = {
   front: "0deg 90deg 2m",
-  side: "90deg 75deg 0.2m" ,
+  side: "90deg 90deg 0.2m" ,
   back: "180deg 90deg 3m"
 };
 

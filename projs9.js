@@ -45,9 +45,9 @@ document.getElementById("P2-view-side").innerHTML = "Side";
 document.getElementById("P2-view-back").innerHTML = "Back";
 
 const path = window.location.pathname;
-if (path.includes('product1.html') || !path.includes('product')) {
-  document.getElementById("title-sec2").innerHTML = "LOTUS EVORA GT";
-  document.getElementById("text-sec2").innerHTML = "The Lotus Evora GT blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
+if (path.includes('product9.html') || !path.includes('product')) {
+  document.getElementById("title-sec2").innerHTML = "Aston Martin Vulcan";
+  document.getElementById("text-sec2").innerHTML = "Aston Martin Vulcan blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
 }
 
 document.getElementById("subtitle-sec2").innerHTML = "5G";
@@ -60,9 +60,9 @@ document.querySelector("#ctaa-sec3 .ctaa-text").innerHTML = "Contact Us";
 document.querySelector("#ctaa-sec3 .cta-arrow").innerHTML = "→";
 
 document.getElementById("title-sec6").innerHTML = "Wheel Options";
-document.getElementById("title1-sec6-card1").innerHTML = "Germany Simen Tire";
-document.getElementById("title1-sec6-card2").innerHTML = "Japan Sport Drift Tire";
-document.getElementById("title1-sec6-card3").innerHTML = "Italy Racing Tire";
+document.getElementById("title1-sec6-card1").innerHTML = "Switzerland Hyper Tire";
+document.getElementById("title1-sec6-card2").innerHTML = " Germany Stream Tire";
+document.getElementById("title1-sec6-card3").innerHTML = "Japan Sport Tire";
 
 document.getElementById("title-sec5").innerHTML = "Premium Wheel Technology";
 document.getElementById("desc-sec5").innerHTML = "Crafted to deliver maximum grip and endurance, the German-engineered improves handling during rapid acceleration and tire enhances stability at high speeds and ensures optimal traction in sharp turns and a smoother ride on both track and street.. Known for durability and quiet rolling, these wheels provide exceptional performance on both dry tracks and everyday roads.";
@@ -133,13 +133,14 @@ let heroModel = document.getElementById("P2-section1Model");
 let heroButtons = document.querySelectorAll(".cta-text");
 
 let positions = {
-  front: "0deg 90deg 3m",
-  side: "90deg 90deg 1.8m",
+  front: "0deg 90deg 2m",
+  side: "90deg 90deg 0.2m" ,
   back: "180deg 90deg 3m"
 };
 
 heroModel.addEventListener("load", () => {
- heroModel.setAttribute("camera-orbit", "55deg 75deg 3m");});
+  heroModel.setAttribute("camera-orbit", "55deg 75deg 3m");
+});
 
 heroButtons.forEach(btn => {
   btn.addEventListener("click", () => {
