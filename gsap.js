@@ -4,7 +4,11 @@ gsap.to("#preloader", {
   opacity: 0,
   duration: 0.6,
   delay: 1.5,
-  ease: "power2.inOut"
+  ease: "power2.inOut",
+  onComplete: () => {
+    const el = document.getElementById("preloader");
+    if (el) el.style.display = "none";
+  }
 });
 
 gsap.from("header", {
@@ -85,24 +89,22 @@ gsap.to(".hero-3d", {
   delay: 3.5
 });
 
-gsap.set(".section2, .section2 *, .slider-section, .slider-section *, .section4, .section4 *, .section5, .section5 *, .fqa-section, .fqa-section *, .footer, .footer *", {
-  opacity: 0
-});
+// Removed aggressive GSAP set opacity 0 for all elements
 
 ScrollTrigger.create({
   trigger: ".section2",
   start: "top 80%",
   once: true,
   onEnter: () => {
-    gsap.set(".section2, .section2 *", { opacity: 1 });
-    
+    // Removed gsap.set opacity 1
+
     gsap.from("#title-sec2", {
       opacity: 0,
       x: -100,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.from("#text-sec2", {
       opacity: 0,
       y: 30,
@@ -110,7 +112,7 @@ ScrollTrigger.create({
       delay: 0.15,
       ease: "power2.out"
     });
-    
+
     gsap.from("#cta-sec2", {
       opacity: 0,
       scale: 0.8,
@@ -120,7 +122,7 @@ ScrollTrigger.create({
       ease: "back.out(1.7)",
       clearProps: "all"
     });
-    
+
     gsap.from(".stat-box", {
       opacity: 0,
       x: -100,
@@ -129,7 +131,7 @@ ScrollTrigger.create({
       delay: 0.3,
       ease: "power2.out"
     });
-    
+
     gsap.from(".mini-stat", {
       opacity: 0,
       x: 100,
@@ -153,7 +155,7 @@ ScrollTrigger.create({
       duration: 0.8,
       ease: "power2.out"
     });
-    
+
     gsap.from("#cta-sec3", {
       opacity: 0,
       x: -50,
@@ -162,7 +164,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from("#ctaa-sec3", {
       opacity: 0,
       x: 50,
@@ -179,7 +181,19 @@ ScrollTrigger.create({
   start: "top 80%",
   once: true,
   onEnter: () => {
-    gsap.set(".slider-section, .slider-section *", { opacity: 1 });
+    // No animations defined here originally other than set opacity 1, 
+    // so just ensuring it's visible is handled by default CSS.
+    // If there were explicit animations (like cards fading in), we would add them here.
+    // The previous code only had gsap.set opacity 1. 
+    // If the section was hidden by line 88, this revealed it.
+    // Since we removed line 88, it's visible by default. 
+    // We can add a subtle fade in for the whole section if desired, strictly optional.
+    gsap.from(".slider-section", {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      ease: "power2.out"
+    });
   }
 });
 
@@ -188,15 +202,13 @@ ScrollTrigger.create({
   start: "top 70%",
   once: true,
   onEnter: () => {
-    gsap.set(".section4, .section4 *", { opacity: 1 });
-    
     gsap.from("#title-sec4", {
       opacity: 0,
       y: 50,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.utils.toArray(".section4-card").forEach((card, i) => {
       gsap.from(card, {
         opacity: 0,
@@ -218,7 +230,7 @@ gsap.utils.toArray(".section4-card").forEach((card) => {
       ease: "back.out(1.5)"
     });
   });
-  
+
   card.addEventListener("mouseleave", () => {
     const icon = card.querySelector(".section4-icon");
     gsap.to(icon, {
@@ -234,15 +246,13 @@ ScrollTrigger.create({
   start: "top 70%",
   once: true,
   onEnter: () => {
-    gsap.set(".section5, .section5 *", { opacity: 1 });
-    
     gsap.from("#title-sec5", {
       opacity: 0,
       x: -80,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.from(".section5-text-row", {
       opacity: 0,
       y: 30,
@@ -250,7 +260,7 @@ ScrollTrigger.create({
       delay: 0.15,
       ease: "power2.out"
     });
-    
+
     gsap.from("#cta-main-sec5", {
       opacity: 0,
       scale: 0.8,
@@ -259,7 +269,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from("#cta-second-text-sec5", {
       opacity: 0,
       scale: 0.8,
@@ -268,7 +278,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from(".section5-card", {
       opacity: 0,
       y: 50,
@@ -277,7 +287,7 @@ ScrollTrigger.create({
       delay: 0.4,
       ease: "power2.out"
     });
-    
+
     gsap.from(".section5-big-card", {
       opacity: 0,
       x: 150,
@@ -285,7 +295,7 @@ ScrollTrigger.create({
       delay: 0.5,
       ease: "power3.out"
     });
-    
+
     gsap.from("#bigcard-title", {
       opacity: 0,
       y: -30,
@@ -315,15 +325,13 @@ ScrollTrigger.create({
   start: "top 75%",
   once: true,
   onEnter: () => {
-    gsap.set(".fqa-section, .fqa-section *", { opacity: 1 });
-    
     gsap.from("#faq-title", {
       opacity: 0,
       scale: 0.9,
       duration: 0.8,
       ease: "power2.out"
     });
-    
+
     gsap.utils.toArray(".fqa-box").forEach((box, i) => {
       gsap.from(box, {
         opacity: 0,
@@ -341,8 +349,6 @@ ScrollTrigger.create({
   start: "top 85%",
   once: true,
   onEnter: () => {
-    gsap.set(".footer, .footer *", { opacity: 1 });
-    
     gsap.from(".footer-logo", {
       opacity: 0,
       scale: 0.8,
@@ -350,7 +356,7 @@ ScrollTrigger.create({
       duration: 0.8,
       ease: "back.out(1.5)"
     });
-    
+
     gsap.from(".footer-link", {
       opacity: 0,
       y: 20,
@@ -359,7 +365,7 @@ ScrollTrigger.create({
       delay: 0.15,
       ease: "power2.out"
     });
-    
+
     gsap.from(".footer-subscribe", {
       opacity: 0,
       y: 30,
@@ -367,7 +373,7 @@ ScrollTrigger.create({
       delay: 0.3,
       ease: "power2.out"
     });
-    
+
     gsap.from(".footer-bottom", {
       opacity: 0,
       y: 20,
@@ -386,7 +392,7 @@ gsap.utils.toArray(".cta, .ctaa, .cta-btn").forEach(btn => {
       ease: "power2.out"
     });
   });
-  
+
   btn.addEventListener("mouseleave", () => {
     gsap.to(btn, {
       scale: 1,
@@ -406,7 +412,7 @@ gsap.utils.toArray(".cta-arrow, .footer-cta-arrow").forEach(arrow => {
         ease: "power2.out"
       });
     });
-    
+
     parent.addEventListener("mouseleave", () => {
       gsap.to(arrow, {
         x: 0,

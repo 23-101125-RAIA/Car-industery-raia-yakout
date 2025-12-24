@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,590 +8,538 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <link rel="icon" type="image/png" href="img/logo.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script></head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
 <body>
-<div class="preloader" id="preloader">
-  <div class="loader">
-    <img class="light" src="img/preholder.gif" alt="Loading">
-  </div>
-</div>
-<header>
-    <ul class="header">
-      <img src="img/logo.png" class="logoo">
-        <li><a href="#" class="nav-link" id="nav-link1"></a></li>
-        <li><a href="#" class="nav-link" id="nav-link2"></a></li>
-        <img src="img/logo.png" class="logo">
-        <li><a href="#" class="nav-link" id="nav-link3"></a></li>
-        <li><a href="#" class="nav-link" id="nav-link4"></a></li>
-        <img src="img/br.png" class="image">
-    </ul>
-    
-</header>
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <img class="light" src="img/preholder.gif" alt="Loading">
+        </div>
+    </div>
+    <header>
+        <ul class="header">
+            <img src="img/logo.png" class="logoo">
+            <li><a href="#" class="nav-link" id="nav-link1"></a></li>
+            <li><a href="#" class="nav-link" id="nav-link2"></a></li>
+            <img src="img/logo.png" class="logo">
+            <li><a href="#" class="nav-link" id="nav-link3"></a></li>
+            <li><a href="#" class="nav-link" id="nav-link4"></a></li>
+            <img src="img/br.png" class="image">
+        </ul>
 
-<div class="mobile-menu" id="mobileMenu">
-  <nav class="mobile-nav">
-    <a href="#" class="mobile-link" id="mobile-link1"></a>
-    <a href="#" class="mobile-link" id="mobile-link2"></a>
-    <a href="#" class="mobile-link" id="mobile-link3"></a>
-    <a href="#" class="mobile-link" id="mobile-link4"></a>
-  </nav>
-</div>
+    </header>
 
-<section class="section1">
-    <p class="section1-title" id="section1-title"></p>
-<div class="hero-3d-div">
-  <model-viewer
-    class="hero-3d"
-    id="restrictedModel"
-    src="3D/hyperconcept.glb"
-
-    camera-controls
-    disable-zoom
-    disable-pan
-     disable-tab
-
-    tone-mapping="neutral"
-    environment-image="legacy"
-    shadow-intensity="2"
-    shadow-softness="1"
-
-    camera-orbit="-91.03deg 85.16deg 14m"
-    min-camera-orbit="-90deg 30deg 22m"
-    max-camera-orbit="-90deg 90deg 22m"
-
-    field-of-view="22deg"
-   
-  ><div class="progress-bar hide" slot="progress-bar"> <div class="update-bar"></div></div>
-  </model-viewer>
-</div>
-
-</section>
-<section class="section2">
-  <div class="section2-inner">
-
-    <div class="section2-div">
-      <h2 class="title" id="title-sec2"></h2>
-      <p class="text" id="text-sec2"></p>
-      <button class="cta" id="cta-sec2"></button>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#" class="mobile-link" id="mobile-link1"></a>
+            <a href="#" class="mobile-link" id="mobile-link2"></a>
+            <a href="#" class="mobile-link" id="mobile-link3"></a>
+            <a href="#" class="mobile-link" id="mobile-link4"></a>
+        </nav>
     </div>
 
-     <div class="section2-div1">
-        <div class="stat-box">
-            <div class="stat-header">
-                <p class="subtext" id="subtext-sec2"></p>
-                <img src="img/ic1.png" class="section2-icon">
+    <section class="section1">
+        <p class="section1-title" id="section1-title"></p>
+        <div class="hero-3d-div">
+            <model-viewer class="hero-3d" id="restrictedModel" src="3D/hyperconcept.glb" camera-controls disable-zoom
+                disable-pan disable-tab tone-mapping="neutral" environment-image="legacy" shadow-intensity="2"
+                shadow-softness="1" camera-orbit="-91.03deg 85.16deg 14m" min-camera-orbit="-90deg 30deg 22m"
+                max-camera-orbit="-90deg 90deg 22m" field-of-view="22deg">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+
+    </section>
+    <section class="section2">
+        <div class="section2-inner">
+
+            <div class="section2-div">
+                <h2 class="title" id="title-sec2"></h2>
+                <p class="text" id="text-sec2"></p>
+                <button class="cta" id="cta-sec2"></button>
             </div>
-            <div class="section2-div3">
-                <div class="section2-bar">
-                    <div class="section2-bar1" id="bar1"></div>
+
+            <div class="section2-div1">
+                <div class="stat-box">
+                    <div class="stat-header">
+                        <p class="subtext" id="subtext-sec2"></p>
+                        <img src="img/ic1.png" class="section2-icon">
+                    </div>
+                    <div class="section2-div3">
+                        <div class="section2-bar">
+                            <div class="section2-bar1" id="bar1"></div>
+                        </div>
+                        <p class="stat-number" id="stat-number"></p>
+                    </div>
                 </div>
-                <p class="stat-number" id="stat-number"></p>
+
+                <div class="stat-box">
+                    <div class="stat-header">
+                        <p class="subtext" id="subtext-sec2-1"></p>
+                        <img src="img/ic2.png" class="section2-icon">
+                    </div>
+                    <div class="section2-div3">
+                        <div class="section2-bar">
+                            <div class="section2-bar1" id="bar2"></div>
+                        </div>
+                        <p class="stat-number" id="stat-number1"></p>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-header">
+                        <p class="subtext" id="subtext-sec2-2"></p>
+                        <img src="img/ic3.png" class="section2-icon">
+                    </div>
+                    <div class="section2-div3">
+                        <div class="section2-bar">
+                            <div class="section2-bar1" id="bar3"></div>
+                        </div>
+                        <p class="stat-number" id="stat-number2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2-div2">
+
+                <div class="mini-stat">
+                    <div class="mini-top">
+                        <p class="subtitle" id="subtitle-sec2"></p>
+                        <img src="img/ic4.png" class="section2-div2-icon">
+                    </div>
+                    <p class="subtext" id="subtext-sec2-3"></p>
+                </div>
+
+                <div class="mini-stat">
+                    <div class="mini-top">
+                        <p class="subtitle" id="subtitle-sec2-1"></p>
+                        <img src="img/ic5.png" class="section2-div2-icon">
+                    </div>
+                    <p class="subtext" id="subtext-sec2-4"></p>
+                </div>
+
+                <div class="mini-stat">
+                    <div class="mini-top">
+                        <p class="subtitle" id="subtitle-sec2-2"></p>
+                        <img src="img/ic6.png" class="section2-div2-icon">
+                    </div>
+                    <p class="subtext" id="subtext-sec2-5"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section3">
+        <p class="title" id="title-sec3"></p>
+        <div class="cta-div">
+            <button class="cta" id="cta-sec3"></button>
+            <button class="ctaa" id="ctaa-sec3">
+                <span class="cta-arrow"></span>
+            </button>
+        </div>
+    </section>
+    <section class="slider-section">
+        <div class="slider-viewport">
+            <div class="slider-track" id="sliderTrack">
+
+                <a href="product1.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c9"></div>
+                                <div class="circle c1"></div>
+                            </div>
+                            <a href="product1.html" class="cta-btn" id="id1"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2022_lotus_emira_gt4.glb" camera-controls disable-zoom disable-pan
+                                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id2"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product2.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c1"></div>
+                                <div class="circle c3"></div>
+                            </div>
+                            <a href="product2.html" class="cta-btn" id="id3"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2023_mclaren_artura_gt4.glb" camera-controls disable-zoom
+                                    disable-pan tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id4"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product3.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c8"></div>
+                                <div class="circle c5"></div>
+                            </div>
+                            <a href="product3.html" class="cta-btn" id="id5"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2019 McLaren Sienna.glb" camera-controls disable-zoom disable-pan
+                                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id6"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product4.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c10"></div>
+                                <div class="circle c7"></div>
+                            </div>
+                            <a href="product4.html" class="cta-btn" id="id7"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2014_varis_kamikaze-r_circuit_ver_nissan_gt-r.glb" camera-controls
+                                    disable-zoom disable-pan tone-mapping="neutral" poster="poster.webp"
+                                    shadow-intensity="2" environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id8"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product5.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c6"></div>
+                                <div class="circle c10"></div>
+                            </div>
+                            <a href="product5.html" class="cta-btn" id="id9"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2016_mansory_mercedes-amg_gt_s.glb" camera-controls disable-zoom
+                                    disable-pan tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id10"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product6.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c5"></div>
+                                <div class="circle c1"></div>
+                            </div>
+                            <a href="product6.html" class="cta-btn" id="id11"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2014_rocket_bunny_nissan_gtr_r35_v1_aero.glb" camera-controls
+                                    disable-zoom disable-pan tone-mapping="neutral" poster="poster.webp"
+                                    shadow-intensity="2" environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id12"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product7.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c10"></div>
+                                <div class="circle c4"></div>
+                            </div>
+                            <a href="product7.html" class="cta-btn" id="id13"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2025_toyota_gr_supra_a90_final_edition.glb" camera-controls
+                                    disable-zoom disable-pan tone-mapping="neutral" poster="poster.webp"
+                                    shadow-intensity="2" environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id14"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product8.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c3"></div>
+                                <div class="circle c1"></div>
+                            </div>
+                            <a href="product8.html" class="cta-btn" id="id15"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2014_audi_r8_lms_ultra.glb" camera-controls disable-zoom
+                                    disable-pan tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id16"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product9.html" class="card-link">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="circles">
+                                <div class="circle c2"></div>
+                                <div class="circle c1"></div>
+                            </div>
+                            <a href="product9.html" class="cta-btn" id="id17"></a>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="model-frame">
+                                <model-viewer src="3d/2016 Aston Martin Vulcan.glb" camera-controls disable-zoom
+                                    disable-pan tone-mapping="neutral" poster="poster.webp" shadow-intensity="2"
+                                    environment-image="legacy" camera-orbit="33.86deg 71.61deg 18m"
+                                    field-of-view="30deg" disable-tab>
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                </model-viewer>
+                            </div>
+                            <div class="slider-text" id="id18"></div>
+                        </div>
+                    </div>
+                </a>
+
             </div>
         </div>
 
-        <div class="stat-box">
-            <div class="stat-header">
-                <p class="subtext" id="subtext-sec2-1"></p>
-                <img src="img/ic2.png" class="section2-icon">
+        <div class="dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+        </div>
+    </section>
+
+
+
+    <section class="section4">
+        <p class="title" id="title-sec4"></p>
+
+        <article id="section4Grid" class="section4-grid"></article>
+    </section>
+
+    <section class="section5">
+
+
+        <div class="section5-left">
+
+            <p class="title" id="title-sec5"></p>
+
+
+            <div class="section5-text-row">
+                <p class="text1" id="subtitle-sec5"></p>
+                <p class="text" id="desc-sec5">
+                </p>
             </div>
-            <div class="section2-div3">
-                <div class="section2-bar">
-                    <div class="section2-bar1" id="bar2"></div>
+
+
+            <div class="cta-div">
+                <button class="cta" id="cta-main-sec5"></button>
+                <button class="ctaa" id="cta-second-text-sec5">
+
+                    <span class="cta-arrow"></span>
+                </button>
+            </div>
+
+
+            <div class="section5-cards">
+
+                <div class="section5-card">
+                    <img src="img/ic11.png" class="section5-icon">
+                    <p class="subtext" id="card1-title"></p>
+                    <p class="subtext" id="card1-text"></p>
                 </div>
-                <p class="stat-number" id="stat-number1"></p>
+
+                <div class="section5-card">
+                    <img src="img/ic11.png" class="section5-icon">
+                    <p class="subtext" id="card2-title"></p>
+                    <p class="subtext" id="card2-text"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section5-right">
+
+            <div class="section5-big-card">
+
+                <p class="title1" id="bigcard-title"></p>
+
+                <div class="section5-model-frame">
+                    <model-viewer id="section5Model" class="section5-3d" src="3D/2016 Aston Martin Vulcan.glb"
+                        interaction-prompt="none" disable-zoom disable-pan disable-tap camera-controls="false"
+                        camera-orbit="-90deg 80deg 5m" field-of-view="22deg" disable-tab>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+                </div>
+
+                <div class="section5-cta-row">
+                    <button class="cta-text" id="view-front" data-pos="front"></button>
+                    <button class="cta-text " id="view-side" data-pos="side"></button>
+                    <button class="cta-text active" id="view-back" data-pos="back"></button>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class="stat-box">
-            <div class="stat-header">
-                <p class="subtext" id="subtext-sec2-2"></p>
-                <img src="img/ic3.png" class="section2-icon">
+    <section class="fqa-section">
+        <p class="title" id="faq-title"></p>
+
+        <div id="faqContainer"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+
+
+            <div class="footer-block footer-brand">
+                <img src="img/logo.png" class="footer-logo" alt="logo">
+                <div class="title1" id="footer-brand-name"></div>
             </div>
-            <div class="section2-div3">
-                <div class="section2-bar">
-                    <div class="section2-bar1" id="bar3"></div>
+
+
+            <div class="footer-block footer-center">
+
+
+                <div class="footer-links-wrapper">
+
+                    <div class="footer-links-col">
+                        <div class="footer-link" id="footer-company"></div>
+                        <div class="footer-link" id="footer-about"></div>
+                        <div class="footer-link" id="footer-careers"></div>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <div class="footer-link" id="footer-services"></div>
+                        <div class="footer-link" id="footer-vehicles"></div>
+                        <div class="footer-link" id="footer-pricing"></div>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <div class="footer-link" id="footer-support"></div>
+                        <div class="footer-link" id="footer-faqs"></div>
+                        <div class="footer-link" id="footer-contact"></div>
+                    </div>
+
                 </div>
-                <p class="stat-number" id="stat-number2"></p>
+
+
+                <div class="footer-subscribe">
+                    <div class="footer-itlic" id="footer-subtitle"></div>
+
+                    <div class="footer-input-wrapper">
+                        <input type="email" class="input" placeholder="Enter your Email">
+                        <div class="footer-cta" id="ctaa-sec55">
+                            <span class="footer-cta-text"></span>
+                            <span class="footer-cta-arrow"></span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="section2-div2">
 
-      <div class="mini-stat">
-        <div class="mini-top">
-          <p class="subtitle" id="subtitle-sec2"></p>
-          <img src="img/ic4.png" class="section2-div2-icon">
-        </div>
-        <p class="subtext" id="subtext-sec2-3"></p>
-      </div>
 
-      <div class="mini-stat">
-        <div class="mini-top">
-          <p class="subtitle" id="subtitle-sec2-1"></p>
-          <img src="img/ic5.png" class="section2-div2-icon">
-        </div>
-        <p class="subtext" id="subtext-sec2-4"></p>
-      </div>
 
-      <div class="mini-stat">
-        <div class="mini-top">
-          <p class="subtitle" id="subtitle-sec2-2"></p>
-          <img src="img/ic6.png" class="section2-div2-icon">
-        </div>
-        <p class="subtext" id="subtext-sec2-5"></p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="section3">
-  <p class="title" id="title-sec3"></p>
-  <div class="cta-div">
-    <button class="cta" id="cta-sec3"></button>
-    <button class="ctaa" id="ctaa-sec3">
-      <span class="cta-arrow"></span>
-    </button>
-  </div>
-</section>
-  <section class="slider-section">
-    <div class="slider-viewport">
-        <div class="slider-track" id="sliderTrack">
-
-            <a href="product1.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c9"></div>
-                            <div class="circle c1"></div>
-                        </div>
-                        <a href="product1.html" class="cta-btn" id="id1"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2022_lotus_emira_gt4.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id2"></div>
-                    </div>
+            <div class="footer-block footer-bottom">
+                <div class="copy-right" id="footer-copy">
                 </div>
-            </a>
-
-            <a href="product2.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c1"></div>
-                            <div class="circle c3"></div>
-                        </div>
-                        <a href="product2.html" class="cta-btn" id="id3"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2023_mclaren_artura_gt4.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id4"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product3.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c8"></div>
-                            <div class="circle c5"></div>
-                        </div>
-                        <a href="product3.html" class="cta-btn" id="id5"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2019 McLaren Sienna.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id6"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product4.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c10"></div>
-                            <div class="circle c7"></div>
-                        </div>
-                        <a href="product4.html" class="cta-btn" id="id7"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2014_varis_kamikaze-r_circuit_ver_nissan_gt-r.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id8"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product5.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c6"></div>
-                            <div class="circle c10"></div>
-                        </div>
-                        <a href="product5.html" class="cta-btn" id="id9"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2016_mansory_mercedes-amg_gt_s.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id10"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product6.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c5"></div>
-                            <div class="circle c1"></div>
-                        </div>
-                        <a href="product6.html" class="cta-btn" id="id11"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2014_rocket_bunny_nissan_gtr_r35_v1_aero.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id12"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product7.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c10"></div>
-                            <div class="circle c4"></div>
-                        </div>
-                        <a href="product7.html" class="cta-btn" id="id13"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2025_toyota_gr_supra_a90_final_edition.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id14"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product8.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c3"></div>
-                            <div class="circle c1"></div>
-                        </div>
-                        <a href="product8.html" class="cta-btn" id="id15"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2014_audi_r8_lms_ultra.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id16"></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="product9.html" class="card-link">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="circles">
-                            <div class="circle c2"></div>
-                            <div class="circle c1"></div>
-                        </div>
-                        <a href="product9.html" class="cta-btn" id="id17"></a>
-                    </div>
-                    <div class="card-bottom">
-                        <div class="model-frame">
-                            <model-viewer src="3d/2016 Aston Martin Vulcan.glb" camera-controls
-                                disable-zoom
-                                disable-pan
-                                tone-mapping="neutral"
-                                poster="poster.webp" shadow-intensity="2"
-                                environment-image="legacy"
-                                camera-orbit="33.86deg 71.61deg 18m"
-                                field-of-view="30deg" disable-tab>
-                                <div class="progress-bar hide" slot="progress-bar">
-                                    <div class="update-bar"></div>
-                                </div>
-                            </model-viewer>
-                        </div>
-                        <div class="slider-text" id="id18"></div>
-                    </div>
-                </div>
-            </a>
+                <img src="img/sl.png" class="footer-img" alt="icons">
+            </div>
 
         </div>
-    </div>
-
-    <div class="dots">
-        <div class="dot active" data-index="0"></div>
-        <div class="dot" data-index="1"></div>
-        <div class="dot" data-index="2"></div>
-    </div>
-</section>
-
-
-
-<section class="section4">
-  <p class="title" id="title-sec4"></p>
-
-  <article id="section4Grid" class="section4-grid"></article>
-</section>
-
-<section class="section5">
-
-
-  <div class="section5-left">
-
-    <p class="title" id="title-sec5"></p>
-
- 
-    <div class="section5-text-row">
-      <p class="text1" id="subtitle-sec5"></p>
-      <p class="text" id="desc-sec5">
-      </p>
-    </div>
-
-  
-    <div class="cta-div">
-      <button class="cta" id="cta-main-sec5"></button>
-      <button class="ctaa" id="cta-second-text-sec5">
-      
-        <span class="cta-arrow"></span>
-      </button>
-    </div>
-
-  
-    <div class="section5-cards">
-
-      <div class="section5-card">
-        <img src="img/ic11.png" class="section5-icon">
-        <p class="subtext" id="card1-title"></p>
-        <p class="subtext" id="card1-text"></p>
-      </div>
-
-      <div class="section5-card">
-        <img src="img/ic11.png" class="section5-icon">
-        <p class="subtext" id="card2-title"></p>
-        <p class="subtext" id="card2-text"></p>
-      </div>
-
-    </div>
-
-  </div>
-
- 
-  <div class="section5-right">
-
- <div class="section5-big-card">
-
-  <p class="title1" id="bigcard-title" ></p>
-
-  <div class="section5-model-frame">
-    <model-viewer
-      id="section5Model"
-      class="section5-3d"
-      src="3D/2016 Aston Martin Vulcan.glb"
-
-      interaction-prompt="none"
-      disable-zoom
-      disable-pan
-      disable-tap
-
-      camera-controls="false"
-      camera-orbit="-90deg 80deg 5m"
-      field-of-view="22deg"
-      disable-tab
-  ><div class="progress-bar hide" slot="progress-bar"> <div class="update-bar"></div></div></model-viewer>
-  </div>
-
-  <div class="section5-cta-row">
-    <button class="cta-text" id="view-front" data-pos="front"></button>
-    <button class="cta-text " id="view-side" data-pos="side"></button>
-    <button class="cta-text active" id="view-back" data-pos="back"></button>
-  </div>
-
-</div> </div></section>
-
-<section class="fqa-section">
-  <p class="title" id="faq-title"></p>
-
-  <div id="faqContainer"></div>
-</section>
-
-<footer class="footer">
-  <div class="footer-wrapper">
-
-   
-    <div class="footer-block footer-brand">
-      <img src="img/logo.png" class="footer-logo" alt="logo">
-      <div class="title1" id="footer-brand-name"></div>
-    </div>
-
-
-    <div class="footer-block footer-center">
-
-   
-      <div class="footer-links-wrapper">
-
-        <div class="footer-links-col">
-          <div class="footer-link" id="footer-company"></div>
-          <div class="footer-link" id="footer-about"></div>
-          <div class="footer-link" id="footer-careers"></div>
         </div>
-
-        <div class="footer-links-col">
-          <div class="footer-link" id="footer-services"></div>
-          <div class="footer-link" id="footer-vehicles"></div>
-          <div class="footer-link" id="footer-pricing"></div>
-        </div>
-
-        <div class="footer-links-col">
-          <div class="footer-link" id="footer-support"></div>
-          <div class="footer-link" id="footer-faqs"></div>
-          <div class="footer-link" id="footer-contact"></div>
-        </div>
-
-      </div>
-
-   
-      <div class="footer-subscribe">
-        <div class="footer-itlic" id="footer-subtitle"></div>
-
-        <div class="footer-input-wrapper">
-          <input type="email" class="input" placeholder="Enter your Email">
- <div class="footer-cta" id="ctaa-sec55">
-  <span class="footer-cta-text"></span>
-  <span class="footer-cta-arrow"></span>
-</div>
-
-          </div>
-        </div>
-      </div>
-
-   
-
-  
-    <div class="footer-block footer-bottom">
-      <div class="copy-right" id="footer-copy">
-      </div>
-      <img src="img/sl.png" class="footer-img" alt="icons">
-    </div>
-
-  </div> </div>
-</footer>
+    </footer>
 
 
 
 
 
 
-<script src="gsap.js"></script>
+    <script src="gsap.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
