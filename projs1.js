@@ -44,8 +44,11 @@ document.getElementById("P2-view-front").innerHTML = "Front";
 document.getElementById("P2-view-side").innerHTML = "Side";
 document.getElementById("P2-view-back").innerHTML = "Back";
 
-document.getElementById("title-sec2").innerHTML = "LOTUS EVORA GT";
-document.getElementById("text-sec2").innerHTML = "The Lotus Evora GT blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
+const path = window.location.pathname;
+if (path.includes('product1.html') || !path.includes('product')) {
+  document.getElementById("title-sec2").innerHTML = "LOTUS EVORA GT";
+  document.getElementById("text-sec2").innerHTML = "The Lotus Evora GT blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
+}
 
 document.getElementById("subtitle-sec2").innerHTML = "5G";
 document.getElementById("subtext-sec2-3").innerHTML = "Smart Connectivity";
@@ -136,8 +139,7 @@ let positions = {
 };
 
 heroModel.addEventListener("load", () => {
-  heroModel.setAttribute("camera-orbit", "40deg 68deg 3m");
-});
+ heroModel.setAttribute("camera-orbit", "55deg 75deg 3m");});
 
 heroButtons.forEach(btn => {
   btn.addEventListener("click", () => {
