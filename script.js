@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 
 document.getElementById("nav-link1").innerHTML = "Home";
 document.getElementById("nav-link2").innerHTML = "Products";
-document.getElementById("nav-link3").innerHTML = "Event";
+document.getElementById("nav-link3").innerHTML = "Gallery";
 document.getElementById("nav-link4").innerHTML = "About";
 
 document.getElementById("section1-title").innerHTML =
@@ -139,7 +139,7 @@ document.getElementById("desc-sec5").innerHTML =
   "Experience advanced technology designed to make every drive safer, smarter, and more connected.";
 
 document.getElementById("cta-main-sec5").innerHTML = "Pre-Order Now";
-document.getElementById("cta-second-text-sec5").innerHTML =  
+document.getElementById("cta-second-text-sec5").innerHTML =
   'Learn More <span class="cta-arrow">→</span>';
 
 document.getElementById("card1-title").innerHTML = "Futuristic Aerodynamics";
@@ -248,47 +248,47 @@ let dotsContainer = document.querySelector('.dots');
 let cards = document.querySelectorAll('.card');
 let dots = [];
 let currentIndex = 0;
-const gap = 40; 
-const cardWidth = 430; 
+const gap = 40;
+const cardWidth = 430;
 const totalCards = cards.length;
 
 
 dotsContainer.innerHTML = '';
 for (let i = 0; i < totalCards; i++) {
-    let dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    dot.dataset.index = i;
-    dotsContainer.appendChild(dot);
-    dots.push(dot);
+  let dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.dataset.index = i;
+  dotsContainer.appendChild(dot);
+  dots.push(dot);
 }
 
 
 function updateDots(index) {
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-    });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
 }
 
 dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        const index = parseInt(dot.dataset.index);
-        sliderViewport.scrollTo({
-            left: index * (cardWidth + gap),
-            behavior: 'smooth'
-        });
+  dot.addEventListener('click', () => {
+    const index = parseInt(dot.dataset.index);
+    sliderViewport.scrollTo({
+      left: index * (cardWidth + gap),
+      behavior: 'smooth'
     });
+  });
 });
 
 
 sliderViewport.addEventListener('scroll', () => {
-    const scrollLeft = sliderViewport.scrollLeft;
- 
-    const index = Math.round(scrollLeft / (cardWidth + gap));
-    if (index !== currentIndex) {
-        currentIndex = index;
-        updateDots(currentIndex);
-    }
+  const scrollLeft = sliderViewport.scrollLeft;
+
+  const index = Math.round(scrollLeft / (cardWidth + gap));
+  if (index !== currentIndex) {
+    currentIndex = index;
+    updateDots(currentIndex);
+  }
 });
 
 
@@ -315,15 +315,15 @@ document.getElementById("id16").innerHTML = "Audi<br>R8 LMS Ultra";
 document.getElementById("id17").innerHTML = "↗";
 document.getElementById("id18").innerHTML = "Aston Martin<br>Vulcan";
 
-  let burger = document.querySelector(".image");
-  let mobileMenu = document.getElementById("mobileMenu");
+let burger = document.querySelector(".image");
+let mobileMenu = document.getElementById("mobileMenu");
 
-  burger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-  });
+burger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
 
-  document.getElementById("mobile-link1").innerHTML = "Home";
+document.getElementById("mobile-link1").innerHTML = "Home";
 document.getElementById("mobile-link2").innerHTML = "Products";
-document.getElementById("mobile-link3").innerHTML = "Event";
+document.getElementById("mobile-link3").innerHTML = "Gallery";
 document.getElementById("mobile-link4").innerHTML = "About";
 

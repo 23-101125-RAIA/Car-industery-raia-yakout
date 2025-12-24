@@ -108,14 +108,14 @@ ScrollTrigger.create({
   once: true,
   onEnter: () => {
     gsap.set(".p2-section2, .p2-section2 *", { opacity: 1 });
-    
+
     gsap.from(".p2-section2-middle .text", {
       opacity: 0,
       y: 30,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.from(".mini-stat", {
       opacity: 0,
       y: 40,
@@ -124,7 +124,7 @@ ScrollTrigger.create({
       delay: 0.2,
       ease: "power2.out"
     });
-    
+
     gsap.from(".p2-section2 #cta-sec3", {
       opacity: 0,
       scale: 0.8,
@@ -133,7 +133,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from(".p2-section2 #ctaa-sec3", {
       opacity: 0,
       scale: 0.8,
@@ -151,22 +151,22 @@ ScrollTrigger.create({
   once: true,
   onEnter: () => {
     gsap.set(".p2-section6, .p2-section6 *", { opacity: 1 });
-    
+
     gsap.from(".p2-section6 .title", {
       opacity: 0,
       y: 40,
       duration: 0.8,
       ease: "power3.out"
     });
-    
-    gsap.utils.toArray(".p2-card").forEach((card, i) => {
-      gsap.from(card, {
-        opacity: 0,
-        y: 50,
-        duration: 0.6,
-        delay: 0.2 + (i * 0.15),
-        ease: "power2.out"
-      });
+
+    gsap.from(".p2-card", {
+      opacity: 0,
+      y: 50,
+      duration: 0.6,
+      stagger: 0.2,
+      delay: 0.2,
+      ease: "power2.out",
+      clearProps: "all"
     });
   }
 });
@@ -179,7 +179,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
     onEnter: () => {
       gsap.set(section, { opacity: 1 });
       gsap.set(section.querySelectorAll("*"), { opacity: 1 });
-      
+
       const title = section.querySelector(".title");
       if (title) {
         gsap.from(title, {
@@ -189,7 +189,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
           ease: "power3.out"
         });
       }
-      
+
       const text = section.querySelector(".text");
       if (text) {
         gsap.from(text, {
@@ -200,7 +200,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
           ease: "power2.out"
         });
       }
-      
+
       const cards = section.querySelectorAll(".p2-section5-card");
       if (cards.length > 0) {
         cards.forEach((card, i) => {
@@ -213,7 +213,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
           });
         });
       }
-      
+
       const bigCard = section.querySelector(".p2-section5-big-card");
       if (bigCard) {
         gsap.from(bigCard, {
@@ -223,7 +223,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
           delay: 0.3,
           ease: "power3.out"
         });
-        
+
         const bigCardTitle = bigCard.querySelector(".title1");
         if (bigCardTitle) {
           gsap.from(bigCardTitle, {
@@ -245,14 +245,14 @@ ScrollTrigger.create({
   once: true,
   onEnter: () => {
     gsap.set(".p2-section7, .p2-section7 *", { opacity: 1 });
-    
+
     gsap.from(".p2-card-section7 .title", {
       opacity: 0,
       y: 40,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.from(".p2-card-section7 model-viewer", {
       opacity: 0,
       scale: 0.9,
@@ -260,7 +260,7 @@ ScrollTrigger.create({
       delay: 0.2,
       ease: "power3.out"
     });
-    
+
     gsap.utils.toArray(".hotspot").forEach((hotspot, i) => {
       gsap.from(hotspot, {
         opacity: 0,
@@ -279,14 +279,14 @@ ScrollTrigger.create({
   once: true,
   onEnter: () => {
     gsap.set(".section8, .section8 *", { opacity: 1 });
-    
+
     gsap.from(".section8-top .title", {
       opacity: 0,
       y: 40,
       duration: 0.8,
       ease: "power3.out"
     });
-    
+
     gsap.from(".section8 #cta-sec8", {
       opacity: 0,
       scale: 0.8,
@@ -295,7 +295,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from(".section8 #ctaa-sec8", {
       opacity: 0,
       scale: 0.8,
@@ -304,7 +304,7 @@ ScrollTrigger.create({
       ease: "back.out(1.5)",
       clearProps: "all"
     });
-    
+
     gsap.from(".section8-middle .text", {
       opacity: 0,
       y: 30,
@@ -313,7 +313,7 @@ ScrollTrigger.create({
       delay: 0.3,
       ease: "power2.out"
     });
-    
+
     gsap.from(".section8-bottom-left", {
       opacity: 0,
       x: -50,
@@ -321,7 +321,7 @@ ScrollTrigger.create({
       delay: 0.5,
       ease: "power2.out"
     });
-    
+
     gsap.from(".section8-bottom-right", {
       opacity: 0,
       x: 50,
@@ -338,7 +338,7 @@ ScrollTrigger.create({
   once: true,
   onEnter: () => {
     gsap.set(".footer, .footer *", { opacity: 1 });
-    
+
     gsap.from(".footer-logo", {
       opacity: 0,
       scale: 0.8,
@@ -346,7 +346,7 @@ ScrollTrigger.create({
       duration: 0.8,
       ease: "back.out(1.5)"
     });
-    
+
     gsap.from(".footer-link", {
       opacity: 0,
       y: 20,
@@ -355,7 +355,7 @@ ScrollTrigger.create({
       delay: 0.15,
       ease: "power2.out"
     });
-    
+
     gsap.from(".footer-subscribe", {
       opacity: 0,
       y: 30,
@@ -363,7 +363,7 @@ ScrollTrigger.create({
       delay: 0.3,
       ease: "power2.out"
     });
-    
+
     gsap.from(".footer-bottom", {
       opacity: 0,
       y: 20,
@@ -382,7 +382,7 @@ gsap.utils.toArray(".cta, .ctaa, .cta-btn, .cta-text").forEach(btn => {
       ease: "power2.out"
     });
   });
-  
+
   btn.addEventListener("mouseleave", () => {
     gsap.to(btn, {
       scale: 1,
@@ -402,7 +402,7 @@ gsap.utils.toArray(".cta-arrow, .footer-cta-arrow").forEach(arrow => {
         ease: "power2.out"
       });
     });
-    
+
     parent.addEventListener("mouseleave", () => {
       gsap.to(arrow, {
         x: 0,

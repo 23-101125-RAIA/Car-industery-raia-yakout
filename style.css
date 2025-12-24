@@ -194,6 +194,14 @@ li {
     text-decoration: none;
 }
 
+
+
+
+.mobile-link {
+    position: relative;
+    padding: 8px 0;
+}
+
 .mobile-link::before {
     content: '';
     position: absolute;
@@ -207,15 +215,22 @@ li {
     border-radius: 20px;
 }
 
-.mobile-link:hover {
+.mobile-link:hover,
+.mobile-link.active {
     color: var(--cta);
     transform: translateY(-2px);
 }
 
-.mobile-link:hover::before {
+.mobile-link:hover::before,
+.mobile-link.active::before {
     width: 100%;
 }
 
+
+/* Fix clickability of cards by disabling interaction on the preview 3D model */
+.card .model-frame model-viewer {
+    pointer-events: none;
+}
 
 .section1 {
     width: 100%;
@@ -2040,9 +2055,14 @@ li {
     .p2-card-section7 {
         width: 100%;
         height: auto;
-        min-height: 600px;
+        min-height: 500px;
         padding: 40px 20px;
         gap: 50px;
+    }
+
+    .p2-card-section7 model-viewer {
+        height: 400px;
+        width: 100%;
     }
 
     .hotspot-label {
@@ -2200,6 +2220,7 @@ li {
     .section2-div2 {
         width: 100%;
         gap: 25px;
+        flex-direction: row;
     }
 
     .p2-section2-div2 {
@@ -2926,6 +2947,11 @@ li {
         min-height: 450px;
         padding: 25px 12px;
         gap: 35px;
+    }
+
+    .p2-card-section7 model-viewer {
+        height: 400px;
+        width: 100%;
     }
 
     .section8 {

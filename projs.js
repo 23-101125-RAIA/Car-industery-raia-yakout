@@ -7,12 +7,12 @@ window.addEventListener("load", () => {
 
 document.getElementById("nav-link1").innerHTML = "Home";
 document.getElementById("nav-link2").innerHTML = "Products";
-document.getElementById("nav-link3").innerHTML = "Event";
+document.getElementById("nav-link3").innerHTML = "Gallery";
 document.getElementById("nav-link4").innerHTML = "About";
 
 document.getElementById("mobile-link1").innerHTML = "Home";
 document.getElementById("mobile-link2").innerHTML = "Products";
-document.getElementById("mobile-link3").innerHTML = "Event";
+document.getElementById("mobile-link3").innerHTML = "Gallery";
 document.getElementById("mobile-link4").innerHTML = "About";
 
 document.getElementById("P2-view-front").innerHTML = "Front";
@@ -111,7 +111,7 @@ const positions = {
 };
 
 heroModel.addEventListener("load", () => {
-  heroModel.setAttribute("camera-orbit", "40deg 68deg 3m"); 
+  heroModel.setAttribute("camera-orbit", "40deg 68deg 3m");
 });
 
 heroButtons.forEach(btn => {
@@ -123,15 +123,15 @@ heroButtons.forEach(btn => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const hotspots = document.querySelectorAll('.hotspot');
-  
+
   hotspots.forEach((hotspot) => {
-    hotspot.addEventListener('click', function(e) {
+    hotspot.addEventListener('click', function (e) {
       e.stopPropagation();
-      
+
       this.classList.toggle('active');
-      
+
       hotspots.forEach((other) => {
         if (other !== this) {
           other.classList.remove('active');
@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  
-  document.addEventListener('click', function(e) {
+
+  document.addEventListener('click', function (e) {
     if (!e.target.closest('.hotspot')) {
       hotspots.forEach(hotspot => {
         hotspot.classList.remove('active');
