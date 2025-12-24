@@ -5,6 +5,31 @@ window.addEventListener("load", () => {
   }, 4000);
 });
 
+function highlightActiveLink() {
+  let navLinks = document.querySelectorAll('.nav-link');
+  let mobileLinks = document.querySelectorAll('.mobile-link');
+  let currentPath = window.location.pathname;
+
+  navLinks.forEach(link => link.classList.remove('active'));
+  mobileLinks.forEach(link => link.classList.remove('active'));
+
+  let setActiveLink = (id) => {
+    let desktopLink = document.getElementById(id);
+    let mobileLink = document.getElementById(id.replace('nav', 'mobile'));
+    if (desktopLink) desktopLink.classList.add('active');
+    if (mobileLink) mobileLink.classList.add('active');
+  };
+
+  if (currentPath.includes('product')) {
+    setActiveLink('nav-link2');
+  } else if (currentPath.includes('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
+    setActiveLink('nav-link1');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', highlightActiveLink);
+window.addEventListener('load', highlightActiveLink);
+
 document.getElementById("nav-link1").innerHTML = "Home";
 document.getElementById("nav-link2").innerHTML = "Products";
 document.getElementById("nav-link3").innerHTML = "Gallery";
@@ -101,10 +126,10 @@ burger.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
 
-const heroModel = document.getElementById("P2-section1Model");
-const heroButtons = document.querySelectorAll(".cta-text");
+let heroModel = document.getElementById("P2-section1Model");
+let heroButtons = document.querySelectorAll(".cta-text");
 
-const positions = {
+let positions = {
   front: "0deg 75deg 3m",
   side: "90deg 75deg 1.8m",
   back: "180deg 75deg 3m"
@@ -124,7 +149,7 @@ heroButtons.forEach(btn => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const hotspots = document.querySelectorAll('.hotspot');
+  let hotspots = document.querySelectorAll('.hotspot');
 
   hotspots.forEach((hotspot) => {
     hotspot.addEventListener('click', function (e) {

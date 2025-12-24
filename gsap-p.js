@@ -180,7 +180,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
       gsap.set(section, { opacity: 1 });
       gsap.set(section.querySelectorAll("*"), { opacity: 1 });
 
-      const title = section.querySelector(".title");
+      let title = section.querySelector(".title");
       if (title) {
         gsap.from(title, {
           opacity: 0,
@@ -190,7 +190,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
         });
       }
 
-      const text = section.querySelector(".text");
+      let text = section.querySelector(".text");
       if (text) {
         gsap.from(text, {
           opacity: 0,
@@ -201,7 +201,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
         });
       }
 
-      const cards = section.querySelectorAll(".p2-section5-card");
+      let cards = section.querySelectorAll(".p2-section5-card");
       if (cards.length > 0) {
         cards.forEach((card, i) => {
           gsap.from(card, {
@@ -214,7 +214,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
         });
       }
 
-      const bigCard = section.querySelector(".p2-section5-big-card");
+      let bigCard = section.querySelector(".p2-section5-big-card");
       if (bigCard) {
         gsap.from(bigCard, {
           opacity: 0,
@@ -224,7 +224,7 @@ gsap.utils.toArray(".section5").forEach((section, sectionIndex) => {
           ease: "power3.out"
         });
 
-        const bigCardTitle = bigCard.querySelector(".title1");
+        let bigCardTitle = bigCard.querySelector(".title1");
         if (bigCardTitle) {
           gsap.from(bigCardTitle, {
             opacity: 0,
@@ -393,7 +393,7 @@ gsap.utils.toArray(".cta, .ctaa, .cta-btn, .cta-text").forEach(btn => {
 });
 
 gsap.utils.toArray(".cta-arrow, .footer-cta-arrow").forEach(arrow => {
-  const parent = arrow.closest("button, .footer-cta");
+  let parent = arrow.closest("button, .footer-cta");
   if (parent) {
     parent.addEventListener("mouseenter", () => {
       gsap.to(arrow, {

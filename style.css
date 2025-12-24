@@ -87,7 +87,6 @@ li {
     list-style-type: none;
     text-decoration: none;
 }
-
 .header {
     width: 100%;
     height: 150px;
@@ -133,12 +132,14 @@ li {
     border-radius: 20px;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--cta);
     transform: translateY(-2px);
 }
 
-.nav-link:hover::before {
+.nav-link:hover::before,
+.nav-link.active::before {
     width: 100%;
 }
 
@@ -227,7 +228,6 @@ li {
 }
 
 
-/* Fix clickability of cards by disabling interaction on the preview 3D model */
 .card .model-frame model-viewer {
     pointer-events: none;
 }
@@ -1375,10 +1375,10 @@ li {
     width: 100%;
     padding: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    min-height: 100vh;
+
     gap: 30px;
     flex-direction: column;
 }
@@ -1595,8 +1595,418 @@ li {
 
 
 
+@media (max-width: 1440px) {
+    .header {
+        padding: 0 120px;
+        height: 120px;
+    }
+
+    .logo {
+        width: 65px;
+    }
+
+    .nav-link {
+        font-size: 17px;
+    }
+
+    .section1 {
+        height: 1000px;
+        padding: 160px 60px;
+    }
+
+    .section1-title {
+        font-size: 17px;
+    }
+
+    .hero-3d-div {
+        height: 550px;
+        top: 180px;
+    }
+
+    .section2 {
+        padding: 0 60px;
+    }
+
+    .section2-inner {
+        width: 100%;
+        max-width: 1200px;
+        gap: 40px;
+    }
+
+    .section2-div {
+        width: 35%;
+        gap: 28px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .title1 {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .text1 {
+        font-size: 20px;
+    }
+
+    .section2-div1 {
+        width: 58%;
+        padding: 45px 35px;
+        gap: 40px;
+    }
+
+    .section2-div2 {
+        width: 22%;
+        gap: 50px;
+    }
+
+    .subtitle {
+        font-size: 26px;
+    }
+
+    .subtext {
+        font-size: 14px;
+    }
+
+    .stat-number {
+        font-size: 14px;
+    }
+
+    .section3 {
+        padding: 160px 120px 0;
+    }
+
+    .cta {
+        width: 155px;
+        height: 52px;
+        font-size: 17px;
+    }
+
+    .ctaa {
+        height: 52px;
+        font-size: 17px;
+    }
+
+    .slider-section {
+        padding: 35px 60px 80px;
+    }
+
+    .slider-viewport {
+        max-width: 1300px;
+    }
+
+    .slider-track {
+        gap: 45px;
+        padding: 32px;
+    }
+
+    .card {
+        width: 380px;
+        height: 460px;
+        padding: 20px;
+    }
+
+    .model-frame {
+        width: 290px;
+        height: 270px;
+    }
+
+    .slider-text {
+        font-size: 18px;
+    }
+
+    .circle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .cta-btn {
+        width: 48px;
+        height: 44px;
+        font-size: 36px;
+    }
+
+    .section4 {
+        padding: 80px 120px;
+        gap: 50px;
+    }
+
+    .section4-grid {
+        gap: 32px;
+    }
+
+    .section4-card {
+        height: 290px;
+        padding: 45px;
+        gap: 26px;
+    }
+
+    .section4-icon {
+        width: 42px;
+    }
+
+    .section5 {
+        padding: 80px 120px;
+        gap: 100px;
+    }
+
+    .section5-left,
+    .section5-right {
+        gap: 65px;
+    }
+
+    .section5-text-row {
+        gap: 16px;
+    }
+
+    .section5-cards {
+        gap: 25px;
+    }
+
+    .section5-card {
+        width: 300px;
+        height: 180px;
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .section5-big-card {
+        height: 570px;
+        padding: 50px 0;
+        gap: 25px;
+    }
+
+    .section5-model-frame {
+        height: 380px;
+    }
+
+    .section5-icon {
+        width: 38px;
+    }
+
+    .cta-text {
+        font-size: 17px;
+        padding: 8px 16px;
+    }
+
+    .fqa-section {
+        padding: 80px 90px;
+        gap: 42px;
+    }
+
+    #faqContainer {
+        width: 90%;
+    }
+
+    .fqa-question {
+        height: 85px;
+        padding: 0 28px;
+    }
+
+    .fqa-answer {
+        padding: 0 28px;
+    }
+
+    .fqa-box.active .fqa-answer {
+        padding-bottom: 45px;
+    }
+
+    .footer {
+        height: 500px;
+        padding: 26px 60px;
+    }
+
+    .footer-wrapper {
+        width: 90%;
+        padding: 70px 80px;
+    }
+
+    .footer-logo {
+        width: 60px;
+        height: 70px;
+    }
+
+    .footer-links-wrapper {
+        gap: 65px;
+    }
+
+    .footer-links-col {
+        gap: 28px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-itlic {
+        font-size: 28px;
+    }
+
+    .footer-input-wrapper {
+        width: 460px;
+    }
+
+    .input {
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .footer-cta {
+        width: 145px;
+        height: 46px;
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 85px;
+    }
+
+    .footer-img {
+        width: 95px;
+    }
 
 
+    .P2-section1 {
+        padding: 135px 60px 80px;
+    }
+
+    .P2-section1-hero-card {
+        max-width: calc(100% - 120px);
+        padding: 35px 16px;
+        gap: 35px;
+    }
+
+    .P2-title {
+        font-size: 40px;
+    }
+
+    .P2-section1-model-frame {
+        height: 450px;
+    }
+
+    .model-framep2 {
+        height: 450px;
+    }
+
+    .P2-section1-cta-row {
+        gap: 12px;
+    }
+
+    .P2-back-arrow img {
+        width: 36px;
+    }
+
+    .p2-section2 {
+        padding: 80px 120px;
+        gap: 60px;
+    }
+
+    .p2-section2-middle .text {
+        width: 80%;
+    }
+
+    .p2-section2-div2 {
+        gap: 20px;
+    }
+
+    .section5-leftp2,
+    .section5-rightp2 {
+        gap: 65px;
+    }
+
+    .p2-section5-cards {
+        gap: 25px;
+    }
+
+    .p2-section5-card {
+        width: 300px;
+        height: 180px;
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .p2-section5-big-card {
+        height: 570px;
+        padding: 50px 0;
+        gap: 25px;
+    }
+
+    .p2-section5-model-frame {
+        height: 560px;
+    }
+
+    .p2-section6 {
+        padding: 0 0 80px;
+        gap: 25px;
+    }
+
+    .p2-section6-div {
+        gap: 35px;
+    }
+
+    .p2-card {
+        width: 29%;
+        height: 410px;
+        padding: 45px;
+        gap: 18px;
+    }
+
+    .wheel3d {
+        width: 290px;
+        height: 380px;
+    }
+
+    .p2-section7 {
+        padding: 80px 60px;
+        gap: 25px;
+    }
+
+    .p2-card-section7 {
+        width: 100%;
+        max-width: 1300px;
+        height: 760px;
+        padding: 45px;
+        gap: 60px;
+    }
+
+    .hotspot-label {
+        max-width: 270px;
+        padding: 13px 18px;
+    }
+
+    .hotspot-dot {
+        width: 26px;
+        height: 26px;
+    }
+
+    .section8 {
+        padding: 80px 120px;
+        gap: 45px;
+    }
+
+    .section8-middle {
+        gap: 18px;
+    }
+
+    .section8-bottom {
+        gap: 50px;
+    }
+
+    .section8-bottom-left {
+        gap: 18px;
+    }
+
+    .section8-model {
+        width: 640px;
+        height: 690px;
+        transform: translateY(100px);
+    }
+}
 
 @media (min-width: 900px) and (max-width: 1280px) {
     .header {
@@ -1608,7 +2018,7 @@ li {
     }
 
     .section2 {
-        padding: 0 50px;
+        padding: 0 100px;
     }
 
     .section2-inner {
@@ -1621,7 +2031,7 @@ li {
     }
 
     .slider-section {
-        padding: 30px 50px 100px;
+        padding: 30px 100px;
     }
 
     .section4 {
@@ -1631,6 +2041,10 @@ li {
     .section5 {
         padding: 100px 100px;
         gap: 100px;
+    }
+
+    .section5-card {
+        width: 100%;
     }
 
     .fqa-section {
@@ -1663,6 +2077,8 @@ li {
 
     .p2-section6-div {
         gap: 30px;
+        padding: 0 66px;
+
     }
 
     .p2-card {
@@ -1679,7 +2095,14 @@ li {
     }
 
     .section8 {
-        padding: 100px 100px;
+        padding: 100px 50px;
+    }
+
+    .section8-model {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: none;
     }
 }
 
@@ -2035,6 +2458,7 @@ li {
     .p2-section6-div {
         flex-direction: column;
         gap: 30px;
+        padding: 0 44px;
     }
 
     .p2-card {
@@ -2077,6 +2501,8 @@ li {
     .section8-top {
         flex-direction: column;
         gap: 30px;
+        align-items: flex-start;
+
     }
 
     .section8-bottom {
@@ -2225,6 +2651,7 @@ li {
 
     .p2-section2-div2 {
         width: 100%;
+
         gap: 25px;
     }
 
@@ -2620,7 +3047,7 @@ li {
 
     .p2-section6 {
         padding: 20px 40px 100px;
-        gap: 0;
+
     }
 
     .p2-section6-div {
@@ -2640,7 +3067,7 @@ li {
     }
 
     .p2-section7 {
-        padding: 60px 20px;
+        padding: 60px 40px;
     }
 
     .p2-card-section7 {
@@ -2649,6 +3076,11 @@ li {
         min-height: 500px;
         padding: 30px 15px;
         gap: 40px;
+    }
+
+    .p2-card-section7 model-viewer {
+        height: 400px;
+        width: 100%;
     }
 
     .hotspot-wrapper {
@@ -2679,6 +3111,7 @@ li {
     .section8-top {
         flex-direction: column;
         gap: 25px;
+        align-items: flex-start;
     }
 
     .section8-bottom {
@@ -2940,7 +3373,7 @@ li {
     }
 
     .p2-section7 {
-        padding: 50px 15px;
+        padding: 20px 40px;
     }
 
     .p2-card-section7 {
