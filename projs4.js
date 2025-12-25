@@ -28,7 +28,7 @@ function setAllText() {
   if (elem("P2-view-back")) elem("P2-view-back").innerHTML = "Back";
 
   const path = window.location.pathname;
-  if (path.includes('product3.html') || !path.includes('product')) {
+  if (path.includes('product4.html') || !path.includes('product')) {
     if (elem("title-sec2")) elem("title-sec2").innerHTML = "Nissan GT-R Premium";
     if (elem("text-sec2")) elem("text-sec2").innerHTML = "Nissan GT-R Premium blends lightweight engineering with a powerful aerodynamic profile, giving drivers an exhilarating balance of speed and control. Its sculpted chassis is built for precision cornering, offering an ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine. ultra-responsive driving experience. Inside, the Evora GT combines track-level performance with refined comfort, making it a true everyday sports machine.";
   }
