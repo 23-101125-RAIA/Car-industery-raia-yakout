@@ -54,25 +54,33 @@
 
         <h2 class="P2-title" id="title-sec2"></h2>
 
-        <div class="circles">
-           <div class="circle c3"></div>
-                                <div class="circle c1"></div>
-        </div>
 
+      <div class="circles">
+        <div class="circle c3 active"
+             data-model="3D/2014_audi_r8_lms_ultra.glb"></div>
 
+        <div class="circle c1"
+             data-model="3D/2014_audi_r8_lms_ultra2.glb"></div>
       </div>
+    </div>
 
-      <div class="P2-section1-model-frame">
-        <div class="model-framep2">
-          <model-viewer id="P2-section1Model" class="P2-section1-3d" src="3D/2014_audi_r8_lms_ultra.glb" disable-zoom
-            disable-pan disable-tap camera-controls field-of-view="85deg" disable-tab>
-            <div class="progress-bar hide" slot="progress-bar">
+    <div class="P2-section1-model-frame">
+      <div class="model-framep2">
+        <model-viewer
+          id="P2-section1Model"
+          class="P2-section1-3d"
+          src="3D/2014_audi_r8_lms_ultra.glb"
+          disable-zoom
+          disable-pan
+          disable-tap
+          camera-controls
+          field-of-view="95deg"
+          disable-tab>
+        </model-viewer> <div class="progress-bar hide" slot="progress-bar">
               <div class="update-bar"></div>
             </div>
-          </model-viewer>
-        </div>
       </div>
-
+    </div>
       <div class="P2-section1-cta-row">
         <button class="cta-text" id="P2-view-front" data-pos="front">Front</button>
         <button class="cta-text" id="P2-view-side" data-pos="side">Side</button>

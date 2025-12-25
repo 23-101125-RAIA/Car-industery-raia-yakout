@@ -43,45 +43,52 @@
       <a href="#" class="mobile-link" id="mobile-link4"></a>
     </nav>
   </div>
-  <section class="P2-section1">
+ <section class="P2-section1">
+  <div class="P2-section1-hero-card">
 
-    <div class="P2-section1-hero-card">
-
-      <div class="P2-top-header">
-        <div class="P2-back-arrow" onclick="window.location.href='index.html'">
-          <img src="img/bk.png" alt="">
-        </div>
-
-        <h2 class="P2-title" id="title-sec2"></h2>
-
-        <div class="circles">
-        <div class="circle c2"></div>
-                                <div class="circle c1"></div>
-        </div>
-
-
+    <div class="P2-top-header">
+      <div class="P2-back-arrow" onclick="window.location.href='index.html'">
+        <img src="img/bk.png" alt="">
       </div>
 
-      <div class="P2-section1-model-frame">
-        <div class="model-framep2">
-          <model-viewer id="P2-section1Model" class="P2-section1-3d" src="3D/2016 Aston Martin Vulcan.glb" disable-zoom
-            disable-pan disable-tap camera-controls field-of-view="95deg" disable-tab>
-            <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-            </div>
-          </model-viewer>
-        </div>
-      </div>
+      <h2 class="P2-title" id="title-sec2"></h2>
 
-      <div class="P2-section1-cta-row">
-        <button class="cta-text" id="P2-view-front" data-pos="front">Front</button>
-        <button class="cta-text" id="P2-view-side" data-pos="side">Side</button>
-        <button class="cta-text" id="P2-view-back" data-pos="back">Back</button>
-      </div>
+      <div class="circles">
+        <div class="circle c2 active"
+             data-model="3D/2016 Aston Martin Vulcan.glb"></div>
 
+        <div class="circle c1"
+             data-model="3D/2016 Aston Martin Vulcan2.glb"></div>
+      </div>
     </div>
 
-  </section>
+    <div class="P2-section1-model-frame">
+      <div class="model-framep2">
+        <model-viewer
+          id="P2-section1Model"
+          class="P2-section1-3d"
+          src="3D/2016 Aston Martin Vulcan.glb"
+          disable-zoom
+          disable-pan
+          disable-tap
+          camera-controls
+          field-of-view="95deg"
+          disable-tab>
+        </model-viewer> <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+      </div>
+    </div>
+
+    <div class="P2-section1-cta-row">
+      <button class="cta-text" data-pos="front">Front</button>
+      <button class="cta-text" data-pos="side">Side</button>
+      <button class="cta-text" data-pos="back">Back</button>
+    </div>
+
+  </div>
+</section>
+
 
   <section class="p2-section2">
 

@@ -139,7 +139,8 @@ let positions = {
 };
 
 heroModel.addEventListener("load", () => {
- heroModel.setAttribute("camera-orbit", "55deg 75deg 3m");});
+  heroModel.setAttribute("camera-orbit", "55deg 75deg 3m");
+});
 
 heroButtons.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -149,6 +150,7 @@ heroButtons.forEach(btn => {
     heroModel.setAttribute("camera-orbit", positions[btn.dataset.pos]);
   });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   let hotspots = document.querySelectorAll('.hotspot');

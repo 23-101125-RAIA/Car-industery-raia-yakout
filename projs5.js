@@ -134,7 +134,7 @@ let heroButtons = document.querySelectorAll(".cta-text");
 
 let positions = {
   front: "0deg 90deg 2m",
-  side: "90deg deg 0.2m" ,
+  side: "90deg deg 0.2m",
   back: "180deg 90deg 3m"
 };
 

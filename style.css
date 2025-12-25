@@ -613,12 +613,19 @@ li {
     height: 50px;
     border-radius: 50%;
     box-shadow: var(--sh1);
+
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .circle:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
+.circle.active {
+  box-shadow: 0 0 0 3px var(--cta);
+  transform: scale(1.15);
+}
 
 .cta-btn {
     width: 54px;
@@ -2651,7 +2658,7 @@ li {
 
     .p2-section2-div2 {
         width: 100%;
-
+flex-direction: row;
         gap: 25px;
     }
 
