@@ -269,3 +269,56 @@ if (burger && mobileMenu) {
     mobileMenu.classList.toggle("active");
   });
 }
+
+function setupProgressBars() {
+  const modelViewers = document.querySelectorAll('model-viewer');
+  
+  modelViewers.forEach(viewer => {
+    const progressBar = viewer.querySelector('.progress-bar');
+    const updateBar = viewer.querySelector('.update-bar');
+    
+    if (!progressBar || !updateBar) return;
+    
+    if (viewer.loaded) {
+      progressBar.classList.add('hide');
+      return;
+    }
+    
+    progressBar.classList.remove('hide');
+    
+    viewer.addEventListener('progress', (event) => {
+      const progress = event.detail.totalProgress;
+      updateBar.style.width = `${progress * 100}%`;
+    });
+    
+    viewer.addEventListener('load', () => {
+      updateBar.style.width = '100%';
+      setTimeout(() => {
+        progressBar.classList.add('hide');
+      }, 300);
+    });
+    
+    setTimeout(() => {
+      if (!viewer.loaded) {
+        progressBar.classList.add('hide');
+      }
+    }, 5000);
+  });
+}
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    let preloader = document.getElementById("preloader");
+    if (preloader) preloader.style.display = "none";
+    
+    setupProgressBars();
+  }, 4000);
+  
+  setAllText();
+  setupModelSwitching();
+  setupCameraButtons();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupProgressBars();
+});

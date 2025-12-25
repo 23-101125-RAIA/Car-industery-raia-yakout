@@ -16,10 +16,10 @@
     --glass-br: rgba(255, 255, 255, 0.10);
     --bar: rgba(137, 137, 137, 0.2);
     --sh: rgba(224, 237, 61, 0.25);
-    --sh1: agba(224, 237, 61, 0.6);
+    --sh1: rgba(224, 237, 61, 0.6);
     --c4: #98bdb5;
     --c2: #333333;
-    --c7: #343c00;
+    --c7: #000733;
     --c5: #860000;
     --c8: #FFAE00;
      
@@ -607,7 +607,7 @@ li {
 
 .circles {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .circle {
@@ -615,7 +615,7 @@ li {
     height: 50px;
     border-radius: 50%;
     box-shadow: var(--sh1);
-
+border: 1px solid var(--black) ;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -3408,11 +3408,15 @@ flex-direction: row;
 .aboutSection {
     padding-top: 130px;
     width: 100%;
-    background: var(--linar2, linear-gradient(180deg, var(--greenm) 32.08%,  var(--greendark) 100%));
+    height: auto;
+ background-image: url("img/MacBook Airr.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about-model {
-    width: 450px;
+    width: 650px;
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
@@ -3664,4 +3668,32 @@ flex-direction: row;
         padding: 10px 14px;
         font-size: 13px;
     }
+}
+
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 400px;
+}
+
+.progress-bar.hide {
+  display: none;
+}
+
+.update-bar {
+  background-color: var(--cta);
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
